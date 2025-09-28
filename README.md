@@ -13,18 +13,22 @@ This is part 3. So what are we doing here. Well, I'm not sure, a couple of thing
 
 #1 we previously created a app that creates a synthetic demographic dataset (see Blog). We for that blog posted all data into a single target data store. Firstly I've modified this version so that each of our data products can go into it's own data store.
 
-I've also aligned/extended thecypher commands from ./nodes/* to align with the datacreated by our python data generator. The app will now create a nice "Synthetic Demographic dataset" representing Ireland.
+I've also aligned/extended the cypher commands from ./nodes/* to align with the data created by our python data generator. The app will now create a nice "Synthetic Demographic dataset" representing Ireland.
 
 We can then from here create Kafka sink jobs that will 
 We then have our Cypher commands that can create transactions 
 
 To make sure I don't trip over anyone locally looking, having problems with things like PPI/GDPR/PII, I modelled the data as per Ireland. But if you look at the data folder, containing `ie_banks.json` and `ireland.json` you will realise it wont take much to model to your own locale.
 
-At the moment this version will post data directly into either a **MongoDB**, **PostgreSQL**, **Redis** or **Kafka**. That is intentional, based on personal requirements, but sure it can be extended to cover other db's. I also added the ability for each of the data products to be created `adults`, `children` and `families` to go into seperate/different data stores.
+At the moment this version will/can post data directly into either a **MongoDB**, **PostgreSQL**, **Redis** or **Kafka**. That is intentional, based on personal requirements, but sure it can be extended to cover other db's. I also added the ability for each of the data products to be created `adults`, `children` and `families` to go into seperate/different data stores.
+
+For the Blog where we will create Node4J nodes for the Python app creating data we will use the app to push data onto our Kafka topics, from where we will use Kafka's connect framework to create the desired nodes.
+
+The app itself is capable of the below however:
 
 **WHY**: well it allows us to say push the `children` to a **Redis** store, the `adults` to **PostgreSql** and `families` to **Kafka**. With this we can then use **Apache Flink CDC** to source the adults from the PostgreSql store and suck it via **Apache Flink**, push it up to **Apache Kafka** and sink it into **Neo4J**. While at the same time pull the data thats published on **Apache Kafka** and pull that into **Apache Flink** also, and similar for **Redis**. 
 
-This will now allow us to sink everything into **Apache Paimon** for analytics, and as we have everything in Kafka sink it from there into our **GraphDB**.
+This will now allow us to sink everything into **Apache Fluss** with a lakehouse configuration of **Apache Paimon** defined for additional analytics, and as we have everything in Kafka we can additionally sink it from there into our **GraphDB** datastore.
 
 Basically, we have options once we bring the power of **Apache Flink's CDC** as a source connector, and **Apache Flink** & **Apache Kafka**'s sink connector frameworks.
 
@@ -32,7 +36,7 @@ NOTE: those that follow my blogs, I've discovered a bug in my previous logger fu
 
 BLOG: []()
 
-GIT REPO: []()
+GIT REPO: [GraphDB_Synthentic_Demographic_Generator](https://github.com/georgelza/GraphDB_Synthentic_Demographic_Generator.git)
 
 **The base environment:**
 
@@ -66,18 +70,6 @@ To run the Generator, execute (from root directory):
 We'll be decomposing them, or is that mapping them to Apache Flink Tables (we'll use Flink CDC to ingest data from the PostgreSQL datastore), from where we will push the data products into:
 
 #1 Confluent Kafka and onto wards to Neo4J
-#2 Apache Paimon to be stored on our MinIO S3 bucket
-
-
-**Polaris Catalog**
-
-This blog as a change uses Polaris as catalog. Have to give credit where due. As much as building a HDFS/Hadoop/HMS environment came second nature, I wanted a change and with perfect timing Gilles came up with the below 2 blogs. I've copied his core Polaris/Rest catalog integration into this blog. 
-
-By: Gilles Philippart
-
-- **Part 1** https://medium.com/@gilles.philippart/build-a-data-lakehouse-with-apache-iceberg-polaris-trino-minio-349c534ecd98
-
-- **Part 2** https://medium.com/@gilles.philippart/build-a-streaming-data-lakehouse-with-apache-flink-kafka-iceberg-and-polaris-473c47e04525
 
 
 ### Data structures used:
