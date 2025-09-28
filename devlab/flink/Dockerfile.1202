@@ -1,0 +1,27 @@
+FROM flink:1.20.2-scala_2.12-java17
+
+RUN echo "--> Setup Directory Structure" && \
+    mkdir -p /opt/flink/checkpoints && \
+    mkdir -p /opt/flink/rocksdb && \
+    mkdir -p /opt/flink/log
+
+RUN echo "--> Install JARs: Flink's S3 plugin" && \
+    mkdir ./plugins/s3-fs-hadoop && \
+    mv ./opt/flink-s3-fs-hadoop-1.20.2.jar ./plugins/s3-fs-hadoop/
+
+RUN echo "--> Install Flink JARs: Generic"
+COPY stage/bundle-2.31.9.jar                            /opt/flink/lib/bundle-2.31.9.jar  
+COPY stage/flink-shaded-hadoop-2-uber-2.8.3-10.0.jar    /opt/flink/lib/flink-shaded-hadoop-2-uber-2.8.3-10.0.jar
+COPY stage/paimon-s3-1.2.0.jar                          /opt/flink/lib/paimon-s3-1.2.0.jar
+
+COPY stage/postgresql-42.7.6.jar                          /opt/flink/lib/postgresql-42.7.6.jar
+COPY stage/flink-sql-connector-postgres-cdc-3.4.0.jar   /opt/flink/lib/flink-sql-connector-postgres-cdc-3.4.0.jar
+COPY stage/flink-sql-connector-kafka-3.4.0-1.20.jar    /opt/flink/lib/flink-sql-connector-kafka-3.4.0-1.20.jar 
+COPY stage/paimon-flink-1.20-1.2.0.jar                   /opt/flink/lib/paimon-flink-1.20-1.2.0.jar
+
+COPY stage/flink-sql-json-1.20.2.jar                     /opt/flink/lib/flink-sql-json-1.20.2.jar     
+COPY stage/flink-json-1.20.2.jar                         /opt/flink/lib/flink-json-1.20.2.jar
+COPY stage/flink-sql-parquet-1.20.2.jar                  /opt/flink/lib/flink-sql-parquet-1.20.2.jar
+
+
+RUN chown -R flink:flink /opt/flink

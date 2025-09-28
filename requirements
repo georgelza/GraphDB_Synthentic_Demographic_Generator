@@ -1,0 +1,8 @@
+faker       
+random-username 
+pymongo
+psycopg2-binary
+numpy
+redis
+python-dateutil
+confluent_kafka

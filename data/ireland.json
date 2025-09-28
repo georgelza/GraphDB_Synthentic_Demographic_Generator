@@ -1,0 +1,3923 @@
+{ "name": "Ireland", 
+  "countryCode": "IE", 
+  "country": "Republic of Ireland",
+  "continent": "Europe", 
+  "currency": "EUR", 
+  "currencySymbol": "€", 
+  "countryPhonePrefix": "+353", 
+  "rb_code": "EU", 
+  "un_code": "WEOG", 
+  "lg_code": "EN",
+  "dg_code": "DEV",
+  "population": 5149139,
+  "census_year": 2022,
+  "national_average_age": 38.8,
+  "national_male_population": 2544549,
+  "national_female_population": 2604590,
+  "provinces": [
+    {
+      "name": "Leinster",
+      "population": 2858501,
+      "counties": [
+        {
+          "name": "Dublin",
+          "population": 1458154,
+          "average_age": 36.2,
+          "cities_towns": [
+            {
+              "name": "Dublin City",
+              "electoral_ward": "Dublin City",
+              "postal_code": "D01-D24",
+              "population": 592713,
+              "average_age": 36.5,
+              "male_population": 289500,
+              "female_population": 303213,
+              "male_children": 52000,
+              "female_children": 50500,
+              "marital_status_percentages": {
+                "single": 53.2,
+                "married": 35.8,
+                "separated": 3.2,
+                "divorced": 4.1,
+                "widowed": 3.7
+              },
+              "neighbourhood": [
+                {
+                  "name": "Temple Bar",
+                  "postal_code": "D02",
+                  "townlands": "Dublin City",
+                  "electoral_ward": "North Inner City"
+                },
+                {
+                  "name": "Ballsbridge",
+                  "postal_code": "D04",
+                  "townlands": "Pembroke",
+                  "electoral_ward": "South East Inner City"
+                },
+                {
+                  "name": "Rathmines",
+                  "postal_code": "D06",
+                  "townlands": "Rathmines",
+                  "electoral_ward": "South West Inner City"
+                },
+                {
+                  "name": "Clontarf",
+                  "postal_code": "D03",
+                  "townlands": "Clontarf East",
+                  "electoral_ward": "Clontarf"
+                },
+                {
+                  "name": "Drumcondra",
+                  "postal_code": "D09",
+                  "townlands": "Drumcondra",
+                  "electoral_ward": "North Inner City"
+                },
+                {
+                  "name": "Phoenix Park",
+                  "postal_code": "D08",
+                  "townlands": "Phoenix Park",
+                  "electoral_ward": "Cabra-Glasnevin"
+                },
+                {
+                  "name": "Blackrock",
+                  "postal_code": "D18",
+                  "townlands": "Blackrock",
+                  "electoral_ward": "Blackrock"
+                },
+                {
+                  "name": "Howth",
+                  "postal_code": "D13",
+                  "townlands": "Howth",
+                  "electoral_ward": "Howth-Malahide"
+                },
+                {
+                  "name": "Dalkey",
+                  "postal_code": "D18",
+                  "townlands": "Dalkey",
+                  "electoral_ward": "Dun Laoghaire"
+                },
+                {
+                  "name": "Sandymount",
+                  "postal_code": "D04",
+                  "townlands": "Sandymount",
+                  "electoral_ward": "Pembroke"
+                }
+              ]
+            },
+            {
+              "name": "Fingal",
+              "electoral_ward": "Fingal",
+              "postal_code": "D15, K32-K36",
+              "population": 329000,
+              "average_age": 34.8,
+              "male_population": 164000,
+              "female_population": 165000,
+              "male_children": 35000,
+              "female_children": 33500,
+              "marital_status_percentages": {
+                "single": 42.1,
+                "married": 47.2,
+                "separated": 2.8,
+                "divorced": 4.3,
+                "widowed": 3.6
+              },
+              "neighbourhood": [
+                {
+                  "name": "Swords",
+                  "postal_code": "K67",
+                  "townlands": "Swords",
+                  "electoral_ward": "Swords"
+                },
+                {
+                  "name": "Blanchardstown",
+                  "postal_code": "D15",
+                  "townlands": "Blanchardstown",
+                  "electoral_ward": "Blanchardstown-Mulhuddart"
+                },
+                {
+                  "name": "Malahide",
+                  "postal_code": "K36",
+                  "townlands": "Malahide",
+                  "electoral_ward": "Howth-Malahide"
+                },
+                {
+                  "name": "Portmarnock",
+                  "postal_code": "K36",
+                  "townlands": "Portmarnock",
+                  "electoral_ward": "Howth-Malahide"
+                },
+                {
+                  "name": "Rush",
+                  "postal_code": "K56",
+                  "townlands": "Rush",
+                  "electoral_ward": "Rush-Lusk"
+                },
+                {
+                  "name": "Lusk",
+                  "postal_code": "K45",
+                  "townlands": "Lusk",
+                  "electoral_ward": "Rush-Lusk"
+                },
+                {
+                  "name": "Donabate",
+                  "postal_code": "K36",
+                  "townlands": "Donabate",
+                  "electoral_ward": "Donabate"
+                },
+                {
+                  "name": "Castleknock",
+                  "postal_code": "D15",
+                  "townlands": "Castleknock",
+                  "electoral_ward": "Castleknock"
+                }
+              ]
+            },
+            {
+              "name": "South Dublin",
+              "electoral_ward": "South Dublin",
+              "postal_code": "D14, D16, D18, D22-D24",
+              "population": 314000,
+              "average_age": 35.2,
+              "male_population": 156000,
+              "female_population": 158000,
+              "male_children": 32500,
+              "female_children": 31000,
+              "marital_status_percentages": {
+                "single": 41.8,
+                "married": 46.9,
+                "separated": 2.9,
+                "divorced": 4.4,
+                "widowed": 4.0
+              },
+              "neighbourhood": [
+                {
+                  "name": "Tallaght",
+                  "postal_code": "D24",
+                  "townlands": "Tallaght",
+                  "electoral_ward": "Tallaght Central"
+                },
+                {
+                  "name": "Clondalkin",
+                  "postal_code": "D22",
+                  "townlands": "Clondalkin",
+                  "electoral_ward": "Clondalkin"
+                },
+                {
+                  "name": "Lucan",
+                  "postal_code": "K78",
+                  "townlands": "Lucan",
+                  "electoral_ward": "Lucan"
+                },
+                {
+                  "name": "Rathfarnham",
+                  "postal_code": "D14",
+                  "townlands": "Rathfarnham",
+                  "electoral_ward": "Rathfarnham-Templeogue"
+                },
+                {
+                  "name": "Templeogue",
+                  "postal_code": "D6W",
+                  "townlands": "Templeogue",
+                  "electoral_ward": "Rathfarnham-Templeogue"
+                },
+                {
+                  "name": "Terenure",
+                  "postal_code": "D6W",
+                  "townlands": "Terenure",
+                  "electoral_ward": "Terenure-Cherryfield"
+                },
+                {
+                  "name": "Saggart",
+                  "postal_code": "D24",
+                  "townlands": "Saggart",
+                  "electoral_ward": "Rathcoole"
+                },
+                {
+                  "name": "Newcastle",
+                  "postal_code": "K67",
+                  "townlands": "Newcastle",
+                  "electoral_ward": "Rathcoole"
+                }
+              ]
+            },
+            {
+              "name": "Dún Laoghaire-Rathdown",
+              "electoral_ward": "Dún Laoghaire",
+              "postal_code": "A94-A96",
+              "population": 218018,
+              "average_age": 38.4,
+              "male_population": 105000,
+              "female_population": 113018,
+              "male_children": 18500,
+              "female_children": 17800,
+              "marital_status_percentages": {
+                "single": 38.2,
+                "married": 48.1,
+                "separated": 3.1,
+                "divorced": 5.2,
+                "widowed": 5.4
+              },
+              "neighbourhood": [
+                {
+                  "name": "Dún Laoghaire",
+                  "postal_code": "A96",
+                  "townlands": "Dún Laoghaire",
+                  "electoral_ward": "Dún Laoghaire"
+                },
+                {
+                  "name": "Stillorgan",
+                  "postal_code": "A94",
+                  "townlands": "Stillorgan",
+                  "electoral_ward": "Stillorgan"
+                },
+                {
+                  "name": "Foxrock",
+                  "postal_code": "D18",
+                  "townlands": "Foxrock",
+                  "electoral_ward": "Killiney-Shankill"
+                },
+                {
+                  "name": "Killiney",
+                  "postal_code": "A96",
+                  "townlands": "Killiney",
+                  "electoral_ward": "Killiney-Shankill"
+                },
+                {
+                  "name": "Monkstown",
+                  "postal_code": "A94",
+                  "townlands": "Monkstown",
+                  "electoral_ward": "Dún Laoghaire"
+                },
+                {
+                  "name": "Cabinteely",
+                  "postal_code": "D18",
+                  "townlands": "Cabinteely",
+                  "electoral_ward": "Killiney-Shankill"
+                },
+                {
+                  "name": "Leopardstown",
+                  "postal_code": "D18",
+                  "townlands": "Leopardstown",
+                  "electoral_ward": "Stillorgan"
+                },
+                {
+                  "name": "Sandyford",
+                  "postal_code": "D18",
+                  "townlands": "Sandyford",
+                  "electoral_ward": "Stillorgan"
+                }
+              ]
+            },
+            {
+              "name": "Bray",
+              "electoral_ward": "Wicklow",
+              "postal_code": "A98",
+              "population": 33512,
+              "average_age": 39.2,
+              "male_population": 16400,
+              "female_population": 17112,
+              "male_children": 3200,
+              "female_children": 3050,
+              "marital_status_percentages": {
+                "single": 39.1,
+                "married": 46.8,
+                "separated": 3.5,
+                "divorced": 5.8,
+                "widowed": 4.8
+              },
+              "neighbourhood": [
+                {
+                  "name": "Bray Head",
+                  "postal_code": "A98",
+                  "townlands": "Bray",
+                  "electoral_ward": "Bray East"
+                },
+                {
+                  "name": "Little Bray",
+                  "postal_code": "A98",
+                  "townlands": "Bray",
+                  "electoral_ward": "Bray West"
+                },
+                {
+                  "name": "Oldcourt",
+                  "postal_code": "A98",
+                  "townlands": "Oldcourt",
+                  "electoral_ward": "Bray West"
+                },
+                {
+                  "name": "Fassaroe",
+                  "postal_code": "A98",
+                  "townlands": "Fassaroe",
+                  "electoral_ward": "Bray West"
+                },
+                {
+                  "name": "Ballywaltrim",
+                  "postal_code": "A98",
+                  "townlands": "Ballywaltrim",
+                  "electoral_ward": "Bray East"
+                }
+              ]
+            },
+            {
+              "name": "Balbriggan",
+              "electoral_ward": "Fingal",
+              "postal_code": "K32",
+              "population": 24322,
+              "average_age": 33.4,
+              "male_population": 12000,
+              "female_population": 12322,
+              "male_children": 3200,
+              "female_children": 3100,
+              "marital_status_percentages": {
+                "single": 45.8,
+                "married": 42.3,
+                "separated": 3.1,
+                "divorced": 4.8,
+                "widowed": 4.0
+              },
+              "neighbourhood": [
+                {
+                  "name": "Balbriggan Town Centre",
+                  "postal_code": "K32",
+                  "townlands": "Balbriggan",
+                  "electoral_ward": "Balbriggan"
+                },
+                {
+                  "name": "Millfield",
+                  "postal_code": "K32",
+                  "townlands": "Millfield",
+                  "electoral_ward": "Balbriggan"
+                },
+                {
+                  "name": "Clonard",
+                  "postal_code": "K32",
+                  "townlands": "Clonard",
+                  "electoral_ward": "Balbriggan"
+                },
+                {
+                  "name": "Stephenstown",
+                  "postal_code": "K32",
+                  "townlands": "Stephenstown",
+                  "electoral_ward": "Balbriggan"
+                }
+              ]
+            },
+            {
+              "name": "Greystones",
+              "electoral_ward": "Wicklow",
+              "postal_code": "A63",
+              "population": 16939,
+              "average_age": 38.8,
+              "male_population": 8300,
+              "female_population": 8639,
+              "male_children": 1800,
+              "female_children": 1750,
+              "marital_status_percentages": {
+                "single": 32.4,
+                "married": 54.2,
+                "separated": 2.8,
+                "divorced": 5.1,
+                "widowed": 5.5
+              },
+              "neighbourhood": [
+                {
+                  "name": "Greystones Town",
+                  "postal_code": "A63",
+                  "townlands": "Greystones",
+                  "electoral_ward": "Greystones"
+                },
+                {
+                  "name": "Charlesland",
+                  "postal_code": "A63",
+                  "townlands": "Charlesland",
+                  "electoral_ward": "Greystones"
+                },
+                {
+                  "name": "Blacklion",
+                  "postal_code": "A63",
+                  "townlands": "Blacklion",
+                  "electoral_ward": "Greystones"
+                },
+                {
+                  "name": "Farrankelly",
+                  "postal_code": "A63",
+                  "townlands": "Farrankelly",
+                  "electoral_ward": "Greystones"
+                }
+              ]
+            },
+            {
+              "name": "Ashbourne",
+              "electoral_ward": "Meath",
+              "postal_code": "A84",
+              "population": 15680,
+              "average_age": 32.5,
+              "male_population": 7800,
+              "female_population": 7880,
+              "male_children": 2100,
+              "female_children": 2000,
+              "marital_status_percentages": {
+                "single": 31.8,
+                "married": 58.2,
+                "separated": 2.4,
+                "divorced": 3.8,
+                "widowed": 3.8
+              },
+              "neighbourhood": [
+                {
+                  "name": "Ashbourne Town",
+                  "postal_code": "A84",
+                  "townlands": "Ashbourne",
+                  "electoral_ward": "Ashbourne"
+                },
+                {
+                  "name": "Milltown",
+                  "postal_code": "A84",
+                  "townlands": "Milltown",
+                  "electoral_ward": "Ashbourne"
+                },
+                {
+                  "name": "Rath",
+                  "postal_code": "A84",
+                  "townlands": "Rath",
+                  "electoral_ward": "Ashbourne"
+                },
+                {
+                  "name": "Donaghmore",
+                  "postal_code": "A84",
+                  "townlands": "Donaghmore",
+                  "electoral_ward": "Ashbourne"
+                }
+              ]
+            },
+            {
+              "name": "Arklow",
+              "electoral_ward": "Wicklow",
+              "postal_code": "Y14",
+              "population": 13399,
+              "average_age": 38.5,
+              "male_population": 6600,
+              "female_population": 6799,
+              "male_children": 1400,
+              "female_children": 1350,
+              "marital_status_percentages": {
+                "single": 38.2,
+                "married": 47.1,
+                "separated": 3.4,
+                "divorced": 5.8,
+                "widowed": 5.5
+              },
+              "neighbourhood": [
+                {
+                  "name": "Arklow Town Centre",
+                  "postal_code": "Y14",
+                  "townlands": "Arklow",
+                  "electoral_ward": "Arklow"
+                },
+                {
+                  "name": "Ferrybank",
+                  "postal_code": "Y14",
+                  "townlands": "Ferrybank",
+                  "electoral_ward": "Arklow"
+                },
+                {
+                  "name": "Coolgreaney",
+                  "postal_code": "Y14",
+                  "townlands": "Coolgreaney",
+                  "electoral_ward": "Arklow"
+                },
+                {
+                  "name": "Pearse Park",
+                  "postal_code": "Y14",
+                  "townlands": "Pearse Park",
+                  "electoral_ward": "Arklow"
+                }
+              ]
+            },
+            {
+              "name": "Enniscorthy",
+              "electoral_ward": "Wexford",
+              "postal_code": "Y21",
+              "population": 12310,
+              "average_age": 38.9,
+              "male_population": 6050,
+              "female_population": 6260,
+              "male_children": 1300,
+              "female_children": 1250,
+              "marital_status_percentages": {
+                "single": 40.5,
+                "married": 45.2,
+                "separated": 3.3,
+                "divorced": 5.4,
+                "widowed": 5.6
+              },
+              "neighbourhood": [
+                {
+                  "name": "Enniscorthy Town",
+                  "postal_code": "Y21",
+                  "townlands": "Enniscorthy",
+                  "electoral_ward": "Enniscorthy"
+                },
+                {
+                  "name": "Templeshannon",
+                  "postal_code": "Y21",
+                  "townlands": "Templeshannon",
+                  "electoral_ward": "Enniscorthy"
+                },
+                {
+                  "name": "Clonhaston",
+                  "postal_code": "Y21",
+                  "townlands": "Clonhaston",
+                  "electoral_ward": "Enniscorthy"
+                },
+                {
+                  "name": "Duffry Gate",
+                  "postal_code": "Y21",
+                  "townlands": "Duffry Gate",
+                  "electoral_ward": "Enniscorthy"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Louth",
+          "population": 139703,
+          "average_age": 37.8,
+          "cities_towns": [
+            {
+              "name": "Drogheda",
+              "electoral_ward": "Louth",
+              "postal_code": "A92",
+              "population": 44135,
+              "average_age": 36.8,
+              "male_population": 21800,
+              "female_population": 22335,
+              "male_children": 4850,
+              "female_children": 4650,
+              "marital_status_percentages": {
+                "single": 44.2,
+                "married": 43.1,
+                "separated": 3.1,
+                "divorced": 5.2,
+                "widowed": 4.4
+              },
+              "neighbourhood": [
+                {
+                  "name": "Drogheda Town Centre",
+                  "postal_code": "A92",
+                  "townlands": "Drogheda",
+                  "electoral_ward": "Drogheda Urban"
+                },
+                {
+                  "name": "Moneymore",
+                  "postal_code": "A92",
+                  "townlands": "Moneymore",
+                  "electoral_ward": "Drogheda Urban"
+                },
+                {
+                  "name": "Rathmullen",
+                  "postal_code": "A92",
+                  "townlands": "Rathmullen",
+                  "electoral_ward": "Drogheda Rural"
+                },
+                {
+                  "name": "Cement",
+                  "postal_code": "A92",
+                  "townlands": "Cement",
+                  "electoral_ward": "Drogheda Urban"
+                },
+                {
+                  "name": "Haymarket",
+                  "postal_code": "A92",
+                  "townlands": "Haymarket",
+                  "electoral_ward": "Drogheda Urban"
+                },
+                {
+                  "name": "Yellow Furze",
+                  "postal_code": "A92",
+                  "townlands": "Yellow Furze",
+                  "electoral_ward": "Drogheda Urban"
+                }
+              ]
+            },
+            {
+              "name": "Dundalk",
+              "electoral_ward": "Louth",
+              "postal_code": "A91",
+              "population": 43112,
+              "average_age": 37.2,
+              "male_population": 21300,
+              "female_population": 21812,
+              "male_children": 4700,
+              "female_children": 4500,
+              "marital_status_percentages": {
+                "single": 43.8,
+                "married": 42.7,
+                "separated": 3.4,
+                "divorced": 5.1,
+                "widowed": 5.0
+              },
+              "neighbourhood": [
+                {
+                  "name": "Dundalk Town Centre",
+                  "postal_code": "A91",
+                  "townlands": "Dundalk",
+                  "electoral_ward": "Dundalk-South"
+                },
+                {
+                  "name": "Muirhevnamor",
+                  "postal_code": "A91",
+                  "townlands": "Muirhevnamor",
+                  "electoral_ward": "Dundalk-South"
+                },
+                {
+                  "name": "Dowdallshill",
+                  "postal_code": "A91",
+                  "townlands": "Dowdallshill",
+                  "electoral_ward": "Dundalk-Carlingford"
+                },
+                {
+                  "name": "Point Road",
+                  "postal_code": "A91",
+                  "townlands": "Point Road",
+                  "electoral_ward": "Dundalk-South"
+                },
+                {
+                  "name": "Garavogue",
+                  "postal_code": "A91",
+                  "townlands": "Garavogue",
+                  "electoral_ward": "Dundalk-South"
+                },
+                {
+                  "name": "Hoey's Lane",
+                  "postal_code": "A91",
+                  "townlands": "Hoey's Lane",
+                  "electoral_ward": "Dundalk-South"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Meath",
+          "population": 220826,
+          "average_age": 37.1,
+          "cities_towns": [
+            {
+              "name": "Navan",
+              "electoral_ward": "Meath East",
+              "postal_code": "C15",
+              "population": 33606,
+              "average_age": 36.1,
+              "male_population": 16600,
+              "female_population": 17006,
+              "male_children": 3800,
+              "female_children": 3650,
+              "marital_status_percentages": {
+                "single": 36.3,
+                "married": 50.2,
+                "separated": 2.8,
+                "divorced": 4.2,
+                "widowed": 6.5
+              },
+              "neighbourhood": [
+                {
+                  "name": "Navan Town Centre",
+                  "postal_code": "C15",
+                  "townlands": "Navan",
+                  "electoral_ward": "Navan"
+                },
+                {
+                  "name": "Johnstown",
+                  "postal_code": "C15",
+                  "townlands": "Johnstown",
+                  "electoral_ward": "Navan"
+                },
+                {
+                  "name": "Athlumney",
+                  "postal_code": "C15",
+                  "townlands": "Athlumney",
+                  "electoral_ward": "Navan"
+                },
+                {
+                  "name": "Blackwater",
+                  "postal_code": "C15",
+                  "townlands": "Blackwater",
+                  "electoral_ward": "Navan"
+                },
+                {
+                  "name": "Flowerhill",
+                  "postal_code": "C15",
+                  "townlands": "Flowerhill",
+                  "electoral_ward": "Navan"
+                }
+              ]
+            },
+            {
+              "name": "Trim",
+              "electoral_ward": "Meath West",
+              "postal_code": "C15",
+              "population": 9194,
+              "average_age": 37.8,
+              "male_population": 4550,
+              "female_population": 4644,
+              "male_children": 1050,
+              "female_children": 1000,
+              "marital_status_percentages": {
+                "single": 34.2,
+                "married": 51.8,
+                "separated": 2.9,
+                "divorced": 4.8,
+                "widowed": 6.3
+              },
+              "neighbourhood": [
+                {
+                  "name": "Trim Castle Area",
+                  "postal_code": "C15",
+                  "townlands": "Trim",
+                  "electoral_ward": "Trim"
+                },
+                {
+                  "name": "Newtown",
+                  "postal_code": "C15",
+                  "townlands": "Newtown",
+                  "electoral_ward": "Trim"
+                },
+                {
+                  "name": "Porchfields",
+                  "postal_code": "C15",
+                  "townlands": "Porchfields",
+                  "electoral_ward": "Trim"
+                },
+                {
+                  "name": "Boyne Road",
+                  "postal_code": "C15",
+                  "townlands": "Boyne Road",
+                  "electoral_ward": "Trim"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Wicklow",
+          "population": 154742,
+          "average_age": 38.9,
+          "cities_towns": [
+            {
+              "name": "Wicklow",
+              "electoral_ward": "Wicklow",
+              "postal_code": "A67",
+              "population": 10396,
+              "average_age": 39.1,
+              "male_population": 5100,
+              "female_population": 5296,
+              "male_children": 1150,
+              "female_children": 1100,
+              "marital_status_percentages": {
+                "single": 36.8,
+                "married": 49.2,
+                "separated": 3.1,
+                "divorced": 5.4,
+                "widowed": 5.5
+              },
+              "neighbourhood": [
+                {
+                  "name": "Wicklow Town Centre",
+                  "postal_code": "A67",
+                  "townlands": "Wicklow",
+                  "electoral_ward": "Wicklow"
+                },
+                {
+                  "name": "Marlton",
+                  "postal_code": "A67",
+                  "townlands": "Marlton",
+                  "electoral_ward": "Wicklow"
+                },
+                {
+                  "name": "Murrough",
+                  "postal_code": "A67",
+                  "townlands": "Murrough",
+                  "electoral_ward": "Wicklow"
+                },
+                {
+                  "name": "Castle Street",
+                  "postal_code": "A67",
+                  "townlands": "Castle Street",
+                  "electoral_ward": "Wicklow"
+                }
+              ]
+            },
+            {
+              "name": "Rathdrum",
+              "electoral_ward": "Wicklow",
+              "postal_code": "A67",
+              "population": 1751,
+              "average_age": 37.5,
+              "male_population": 865,
+              "female_population": 886,
+              "male_children": 195,
+              "female_children": 185,
+              "marital_status_percentages": {
+                "single": 38.2,
+                "married": 47.1,
+                "separated": 3.2,
+                "divorced": 5.8,
+                "widowed": 5.7
+              },
+              "neighbourhood": [
+                {
+                  "name": "Rathdrum Village",
+                  "postal_code": "A67",
+                  "townlands": "Rathdrum",
+                  "electoral_ward": "Rathdrum"
+                },
+                {
+                  "name": "Lower Street",
+                  "postal_code": "A67",
+                  "townlands": "Lower Street",
+                  "electoral_ward": "Rathdrum"
+                },
+                {
+                  "name": "Upper Street",
+                  "postal_code": "A67",
+                  "townlands": "Upper Street",
+                  "electoral_ward": "Rathdrum"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Kildare",
+          "population": 246977,
+          "average_age": 36.8,
+          "cities_towns": [
+            {
+              "name": "Naas",
+              "electoral_ward": "Kildare South",
+              "postal_code": "W91",
+              "population": 25074,
+              "average_age": 35.8,
+              "male_population": 12400,
+              "female_population": 12674,
+              "male_children": 2800,
+              "female_children": 2700,
+              "marital_status_percentages": {
+                "single": 36.3,
+                "married": 50.2,
+                "separated": 2.8,
+                "divorced": 4.2,
+                "widowed": 6.5
+              },
+              "neighbourhood": [
+                {
+                  "name": "Naas Town Centre",
+                  "postal_code": "W91",
+                  "townlands": "Naas",
+                  "electoral_ward": "Naas"
+                },
+                {
+                  "name": "Sallins Road",
+                  "postal_code": "W91",
+                  "townlands": "Sallins Road",
+                  "electoral_ward": "Naas"
+                },
+                {
+                  "name": "Ballycane",
+                  "postal_code": "W91",
+                  "townlands": "Ballycane",
+                  "electoral_ward": "Naas"
+                },
+                {
+                  "name": "Caragh Road",
+                  "postal_code": "W91",
+                  "townlands": "Caragh Road",
+                  "electoral_ward": "Naas"
+                },
+                {
+                  "name": "Lacken View",
+                  "postal_code": "W91",
+                  "townlands": "Lacken View",
+                  "electoral_ward": "Naas"
+                },
+                {
+                  "name": "Kerdiffstown",
+                  "postal_code": "W91",
+                  "townlands": "Kerdiffstown",
+                  "electoral_ward": "Naas"
+                }
+              ]
+            },
+            {
+              "name": "Celbridge",
+              "electoral_ward": "Kildare North",
+              "postal_code": "W23",
+              "population": 20601,
+              "average_age": 34.2,
+              "male_population": 10200,
+              "female_population": 10401,
+              "male_children": 2800,
+              "female_children": 2700,
+              "marital_status_percentages": {
+                "single": 35.1,
+                "married": 52.4,
+                "separated": 2.6,
+                "divorced": 4.1,
+                "widowed": 5.8
+              },
+              "neighbourhood": [
+                {
+                  "name": "Celbridge Village",
+                  "postal_code": "W23",
+                  "townlands": "Celbridge",
+                  "electoral_ward": "Celbridge"
+                },
+                {
+                  "name": "Oakley Park",
+                  "postal_code": "W23",
+                  "townlands": "Oakley Park",
+                  "electoral_ward": "Celbridge"
+                },
+                {
+                  "name": "Simmonstown",
+                  "postal_code": "W23",
+                  "townlands": "Simmonstown",
+                  "electoral_ward": "Celbridge"
+                },
+                {
+                  "name": "Oldtown",
+                  "postal_code": "W23",
+                  "townlands": "Oldtown",
+                  "electoral_ward": "Celbridge"
+                },
+                {
+                  "name": "Hazelhatch",
+                  "postal_code": "W23",
+                  "townlands": "Hazelhatch",
+                  "electoral_ward": "Celbridge"
+                }
+              ]
+            },
+            {
+              "name": "Leixlip",
+              "electoral_ward": "Kildare North",
+              "postal_code": "W23",
+              "population": 16504,
+              "average_age": 35.5,
+              "male_population": 8150,
+              "female_population": 8354,
+              "male_children": 1850,
+              "female_children": 1780,
+              "marital_status_percentages": {
+                "single": 34.6,
+                "married": 52.8,
+                "separated": 2.7,
+                "divorced": 4.3,
+                "widowed": 5.6
+              },
+              "neighbourhood": [
+                {
+                  "name": "Leixlip Village",
+                  "postal_code": "W23",
+                  "townlands": "Leixlip",
+                  "electoral_ward": "Leixlip"
+                },
+                {
+                  "name": "Confey",
+                  "postal_code": "W23",
+                  "townlands": "Confey",
+                  "electoral_ward": "Leixlip"
+                },
+                {
+                  "name": "Collinstown",
+                  "postal_code": "W23",
+                  "townlands": "Collinstown",
+                  "electoral_ward": "Leixlip"
+                },
+                {
+                  "name": "Wonderful Barn",
+                  "postal_code": "W23",
+                  "townlands": "Wonderful Barn",
+                  "electoral_ward": "Leixlip"
+                }
+              ]
+            },
+            {
+              "name": "Maynooth",
+              "electoral_ward": "Kildare North",
+              "postal_code": "W23",
+              "population": 15962,
+              "average_age": 30.2,
+              "male_population": 7890,
+              "female_population": 8072,
+              "male_children": 1800,
+              "female_children": 1720,
+              "marital_status_percentages": {
+                "single": 58.4,
+                "married": 32.1,
+                "separated": 2.1,
+                "divorced": 3.8,
+                "widowed": 3.6
+              },
+              "neighbourhood": [
+                {
+                  "name": "Maynooth University",
+                  "postal_code": "W23",
+                  "townlands": "Maynooth University",
+                  "electoral_ward": "Maynooth"
+                },
+                {
+                  "name": "Main Street",
+                  "postal_code": "W23",
+                  "townlands": "Main Street",
+                  "electoral_ward": "Maynooth"
+                },
+                {
+                  "name": "Carton",
+                  "postal_code": "W23",
+                  "townlands": "Carton",
+                  "electoral_ward": "Maynooth"
+                },
+                {
+                  "name": "Moyglare",
+                  "postal_code": "W23",
+                  "townlands": "Moyglare",
+                  "electoral_ward": "Maynooth"
+                },
+                {
+                  "name": "Railpark",
+                  "postal_code": "W23",
+                  "townlands": "Railpark",
+                  "electoral_ward": "Maynooth"
+                }
+              ]
+            },
+            {
+              "name": "Newbridge",
+              "electoral_ward": "Kildare South",
+              "postal_code": "W12",
+              "population": 14312,
+              "average_age": 36.1,
+              "male_population": 7050,
+              "female_population": 7262,
+              "male_children": 1600,
+              "female_children": 1540,
+              "marital_status_percentages": {
+                "single": 37.2,
+                "married": 49.8,
+                "separated": 2.9,
+                "divorced": 4.7,
+                "widowed": 5.4
+              },
+              "neighbourhood": [
+                {
+                  "name": "Newbridge Town Centre",
+                  "postal_code": "W12",
+                  "townlands": "Newbridge",
+                  "electoral_ward": "Newbridge"
+                },
+                {
+                  "name": "Athgarvan",
+                  "postal_code": "W12",
+                  "townlands": "Athgarvan",
+                  "electoral_ward": "Newbridge"
+                },
+                {
+                  "name": "Moorfield",
+                  "postal_code": "W12",
+                  "townlands": "Moorfield",
+                  "electoral_ward": "Newbridge"
+                },
+                {
+                  "name": "Kilbelin",
+                  "postal_code": "W12",
+                  "townlands": "Kilbelin",
+                  "electoral_ward": "Newbridge"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Kilkenny",
+          "population": 103685,
+          "average_age": 39.2,
+          "cities_towns": [
+            {
+              "name": "Kilkenny",
+              "electoral_ward": "Kilkenny",
+              "postal_code": "R95",
+              "population": 26512,
+              "average_age": 39.1,
+              "male_population": 13000,
+              "female_population": 13512,
+              "male_children": 2800,
+              "female_children": 2700,
+              "marital_status_percentages": {
+                "single": 40.8,
+                "married": 44.7,
+                "separated": 3.1,
+                "divorced": 5.2,
+                "widowed": 6.2
+              },
+              "neighbourhood": [
+                {
+                  "name": "Kilkenny Castle Area",
+                  "postal_code": "R95",
+                  "townlands": "Kilkenny",
+                  "electoral_ward": "Kilkenny Central"
+                },
+                {
+                  "name": "High Street",
+                  "postal_code": "R95",
+                  "townlands": "High Street",
+                  "electoral_ward": "Kilkenny Central"
+                },
+                {
+                  "name": "Irishtown",
+                  "postal_code": "R95",
+                  "townlands": "Irishtown",
+                  "electoral_ward": "Kilkenny Central"
+                },
+                {
+                  "name": "Callan Road",
+                  "postal_code": "R95",
+                  "townlands": "Callan Road",
+                  "electoral_ward": "Kilkenny Rural"
+                },
+                {
+                  "name": "Hebron Park",
+                  "postal_code": "R95",
+                  "townlands": "Hebron Park",
+                  "electoral_ward": "Kilkenny Central"
+                },
+                {
+                  "name": "Loughboy",
+                  "postal_code": "R95",
+                  "townlands": "Loughboy",
+                  "electoral_ward": "Kilkenny Central"
+                }
+              ]
+            },
+            {
+              "name": "Callan",
+              "electoral_ward": "Kilkenny",
+              "postal_code": "R95",
+              "population": 2475,
+              "average_age": 40.5,
+              "male_population": 1220,
+              "female_population": 1255,
+              "male_children": 275,
+              "female_children": 260,
+              "marital_status_percentages": {
+                "single": 35.8,
+                "married": 48.2,
+                "separated": 3.4,
+                "divorced": 6.1,
+                "widowed": 6.5
+              },
+              "neighbourhood": [
+                {
+                  "name": "Callan Main Street",
+                  "postal_code": "R95",
+                  "townlands": "Callan",
+                  "electoral_ward": "Callan"
+                },
+                {
+                  "name": "Green Street",
+                  "postal_code": "R95",
+                  "townlands": "Green Street",
+                  "electoral_ward": "Callan"
+                },
+                {
+                  "name": "Mill Street",
+                  "postal_code": "R95",
+                  "townlands": "Mill Street",
+                  "electoral_ward": "Callan"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Carlow",
+          "population": 61968,
+          "average_age": 38.1,
+          "cities_towns": [
+            {
+              "name": "Carlow",
+              "electoral_ward": "Carlow",
+              "postal_code": "R93",
+              "population": 27351,
+              "average_age": 37.8,
+              "male_population": 13500,
+              "female_population": 13851,
+              "male_children": 2900,
+              "female_children": 2800,
+              "marital_status_percentages": {
+                "single": 41.5,
+                "married": 44.2,
+                "separated": 3.2,
+                "divorced": 5.4,
+                "widowed": 5.7
+              },
+              "neighbourhood": [
+                {
+                  "name": "Carlow Town Centre",
+                  "postal_code": "R93",
+                  "townlands": "Carlow",
+                  "electoral_ward": "Carlow Urban"
+                },
+                {
+                  "name": "Tullow Street",
+                  "postal_code": "R93",
+                  "townlands": "Tullow Street",
+                  "electoral_ward": "Carlow Urban"
+                },
+                {
+                  "name": "Graiguecullen",
+                  "postal_code": "R93",
+                  "townlands": "Graiguecullen",
+                  "electoral_ward": "Carlow Urban"
+                },
+                {
+                  "name": "Pollerton",
+                  "postal_code": "R93",
+                  "townlands": "Pollerton",
+                  "electoral_ward": "Carlow Urban"
+                },
+                {
+                  "name": "Browneshill",
+                  "postal_code": "R93",
+                  "townlands": "Browneshill",
+                  "electoral_ward": "Carlow Rural"
+                }
+              ]
+            },
+            {
+              "name": "Tullow",
+              "electoral_ward": "Carlow",
+              "postal_code": "R93",
+              "population": 4673,
+              "average_age": 38.9,
+              "male_population": 2300,
+              "female_population": 2373,
+              "male_children": 520,
+              "female_children": 495,
+              "marital_status_percentages": {
+                "single": 38.2,
+                "married": 46.8,
+                "separated": 3.5,
+                "divorced": 5.8,
+                "widowed": 5.7
+              },
+              "neighbourhood": [
+                {
+                  "name": "Tullow Town Centre",
+                  "postal_code": "R93",
+                  "townlands": "Tullow",
+                  "electoral_ward": "Tullow"
+                },
+                {
+                  "name": "Bridge Street",
+                  "postal_code": "R93",
+                  "townlands": "Bridge Street",
+                  "electoral_ward": "Tullow"
+                },
+                {
+                  "name": "Shillelagh Road",
+                  "postal_code": "R93",
+                  "townlands": "Shillelagh Road",
+                  "electoral_ward": "Tullow"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Laois",
+          "population": 91657,
+          "average_age": 37.5,
+          "cities_towns": [
+            {
+              "name": "Portlaoise",
+              "electoral_ward": "Laois",
+              "postal_code": "R32",
+              "population": 23362,
+              "average_age": 36.8,
+              "male_population": 11550,
+              "female_population": 11812,
+              "male_children": 2650,
+              "female_children": 2550,
+              "marital_status_percentages": {
+                "single": 40.1,
+                "married": 46.2,
+                "separated": 3.1,
+                "divorced": 5.4,
+                "widowed": 5.2
+              },
+              "neighbourhood": [
+                {
+                  "name": "Portlaoise Town Centre",
+                  "postal_code": "R32",
+                  "townlands": "Portlaoise",
+                  "electoral_ward": "Portlaoise"
+                },
+                {
+                  "name": "Main Street",
+                  "postal_code": "R32",
+                  "townlands": "Main Street",
+                  "electoral_ward": "Portlaoise"
+                },
+                {
+                  "name": "Fairgreen",
+                  "postal_code": "R32",
+                  "townlands": "Fairgreen",
+                  "electoral_ward": "Portlaoise"
+                },
+                {
+                  "name": "Railway Street",
+                  "postal_code": "R32",
+                  "townlands": "Railway Street",
+                  "electoral_ward": "Portlaoise"
+                },
+                {
+                  "name": "Jessop Street",
+                  "postal_code": "R32",
+                  "townlands": "Jessop Street",
+                  "electoral_ward": "Portlaoise"
+                }
+              ]
+            },
+            {
+              "name": "Mountmellick",
+              "electoral_ward": "Laois",
+              "postal_code": "R32",
+              "population": 3950,
+              "average_age": 38.2,
+              "male_population": 1950,
+              "female_population": 2000,
+              "male_children": 445,
+              "female_children": 425,
+              "marital_status_percentages": {
+                "single": 37.8,
+                "married": 47.5,
+                "separated": 3.2,
+                "divorced": 5.8,
+                "widowed": 5.7
+              },
+              "neighbourhood": [
+                {
+                  "name": "Mountmellick Town",
+                  "postal_code": "R32",
+                  "townlands": "Mountmellick",
+                  "electoral_ward": "Mountmellick"
+                },
+                {
+                  "name": "Patrick Street",
+                  "postal_code": "R32",
+                  "townlands": "Patrick Street",
+                  "electoral_ward": "Mountmellick"
+                },
+                {
+                  "name": "Church Street",
+                  "postal_code": "R32",
+                  "townlands": "Church Street",
+                  "electoral_ward": "Mountmellick"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Offaly",
+          "population": 82668,
+          "average_age": 38.4,
+          "cities_towns": [
+            {
+              "name": "Tullamore",
+              "electoral_ward": "Offaly",
+              "postal_code": "R35",
+              "population": 15598,
+              "average_age": 37.9,
+              "male_population": 7650,
+              "female_population": 7948,
+              "male_children": 1650,
+              "female_children": 1580,
+              "marital_status_percentages": {
+                "single": 42.8,
+                "married": 44.1,
+                "separated": 3.1,
+                "divorced": 5.1,
+                "widowed": 4.9
+              },
+              "neighbourhood": [
+                {
+                  "name": "Tullamore Town Centre",
+                  "postal_code": "R35",
+                  "townlands": "Tullamore",
+                  "electoral_ward": "Tullamore"
+                },
+                {
+                  "name": "O'Connor Square",
+                  "postal_code": "R35",
+                  "townlands": "O'Connor Square",
+                  "electoral_ward": "Tullamore"
+                },
+                {
+                  "name": "Harbour Street",
+                  "postal_code": "R35",
+                  "townlands": "Harbour Street",
+                  "electoral_ward": "Tullamore"
+                },
+                {
+                  "name": "Clara Road",
+                  "postal_code": "R35",
+                  "townlands": "Clara Road",
+                  "electoral_ward": "Tullamore"
+                },
+                {
+                  "name": "Church Hill",
+                  "postal_code": "R35",
+                  "townlands": "Church Hill",
+                  "electoral_ward": "Tullamore"
+                }
+              ]
+            },
+            {
+              "name": "Birr",
+              "electoral_ward": "Offaly",
+              "postal_code": "R42",
+              "population": 5946,
+              "average_age": 40.1,
+              "male_population": 2920,
+              "female_population": 3026,
+              "male_children": 650,
+              "female_children": 620,
+              "marital_status_percentages": {
+                "single": 46.3,
+                "married": 41.1,
+                "separated": 3.3,
+                "divorced": 5.1,
+                "widowed": 4.2
+              },
+              "neighbourhood": [
+                {
+                  "name": "Birr Castle Grounds",
+                  "postal_code": "R42",
+                  "townlands": "Birr Castle",
+                  "electoral_ward": "Birr"
+                },
+                {
+                  "name": "Main Street",
+                  "postal_code": "R42",
+                  "townlands": "Main Street",
+                  "electoral_ward": "Birr"
+                },
+                {
+                  "name": "Emmet Square",
+                  "postal_code": "R42",
+                  "townlands": "Emmet Square",
+                  "electoral_ward": "Birr"
+                },
+                {
+                  "name": "Castle Street",
+                  "postal_code": "R42",
+                  "townlands": "Castle Street",
+                  "electoral_ward": "Birr"
+                }
+              ]
+            },
+            {
+              "name": "Edenderry",
+              "electoral_ward": "Offaly",
+              "postal_code": "R45",
+              "population": 7359,
+              "average_age": 37.8,
+              "male_population": 3620,
+              "female_population": 3739,
+              "male_children": 820,
+              "female_children": 790,
+              "marital_status_percentages": {
+                "single": 39.2,
+                "married": 46.8,
+                "separated": 3.1,
+                "divorced": 5.4,
+                "widowed": 5.5
+              },
+              "neighbourhood": [
+                {
+                  "name": "Edenderry Town Centre",
+                  "postal_code": "R45",
+                  "townlands": "Edenderry",
+                  "electoral_ward": "Edenderry"
+                },
+                {
+                  "name": "JKL Street",
+                  "postal_code": "R45",
+                  "townlands": "JKL Street",
+                  "electoral_ward": "Edenderry"
+                },
+                {
+                  "name": "Carrick Road",
+                  "postal_code": "R45",
+                  "townlands": "Carrick Road",
+                  "electoral_ward": "Edenderry"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Westmeath",
+          "population": 95840,
+          "average_age": 37.9,
+          "cities_towns": [
+            {
+              "name": "Athlone",
+              "population": 22869,
+              "average_age": 36.8,
+              "male_population": 11200,
+              "female_population": 11669,
+              "male_children": 2400,
+              "female_children": 2300,
+              "marital_status_percentages": {
+                "single": 46.2,
+                "married": 41.8,
+                "separated": 3.2,
+                "divorced": 4.9,
+                "widowed": 3.9
+              },
+              "neighbourhood": [
+                {
+                  "name": "Church Street",
+                  "postal_code": "N37",
+                  "townlands": "Athlone",
+                  "electoral_ward": "Athlone"
+                },
+                {
+                  "name": "Sean Costello Street",
+                  "postal_code": "N37",
+                  "townlands": "Athlone",
+                  "electoral_ward": "Athlone"
+                },
+                {
+                  "name": "Custume Place",
+                  "postal_code": "N37",
+                  "townlands": "Athlone",
+                  "electoral_ward": "Athlone"
+                },
+                {
+                  "name": "Batteries Heights",
+                  "postal_code": "N37",
+                  "townlands": "Athlone",
+                  "electoral_ward": "Athlone"
+                },
+                {
+                  "name": "Clonown",
+                  "postal_code": "N37",
+                  "townlands": "Athlone",
+                  "electoral_ward": "Athlone"
+                }
+              ]
+            },
+            {
+              "name": "Mullingar",
+              "electoral_ward": "Westmeath",
+              "postal_code": "N91",
+              "population": 22667,
+              "average_age": 37.5,
+              "male_population": 11150,
+              "female_population": 11517,
+              "male_children": 2550,
+              "female_children": 2450,
+              "marital_status_percentages": {
+                "single": 42.1,
+                "married": 44.8,
+                "separated": 3.0,
+                "divorced": 5.2,
+                "widowed": 4.9
+              },
+              "neighbourhood": [
+                {
+                  "name": "Mullingar Town Centre",
+                  "postal_code": "N91",
+                  "townlands": "Mullingar",
+                  "electoral_ward": "Mullingar"
+                },
+                {
+                  "name": "Dublin Street",
+                  "postal_code": "N91",
+                  "townlands": "Dublin Street",
+                  "electoral_ward": "Mullingar"
+                },
+                {
+                  "name": "Mount Street",
+                  "postal_code": "N91",
+                  "townlands": "Mount Street",
+                  "electoral_ward": "Mullingar"
+                },
+                {
+                  "name": "Harbour Place",
+                  "postal_code": "N91",
+                  "townlands": "Harbour Place",
+                  "electoral_ward": "Mullingar"
+                },
+                {
+                  "name": "Newbrook",
+                  "postal_code": "N91",
+                  "townlands": "Newbrook",
+                  "electoral_ward": "Mullingar"
+                }
+              ]
+            },
+            {
+              "name": "Moate",
+              "electoral_ward": "Westmeath",
+              "postal_code": "N37",
+              "population": 2785,
+              "average_age": 38.9,
+              "male_population": 1370,
+              "female_population": 1415,
+              "male_children": 315,
+              "female_children": 300,
+              "marital_status_percentages": {
+                "single": 39.8,
+                "married": 46.5,
+                "separated": 3.1,
+                "divorced": 5.4,
+                "widowed": 5.2
+              },
+              "neighbourhood": [
+                {
+                  "name": "Moate Main Street",
+                  "postal_code": "N37",
+                  "townlands": "Moate",
+                  "electoral_ward": "Moate"
+                },
+                {
+                  "name": "Church Street",
+                  "postal_code": "N37",
+                  "townlands": "Church Street",
+                  "electoral_ward": "Moate"
+                },
+                {
+                  "name": "Railway Terrace",
+                  "postal_code": "N37",
+                  "townlands": "Railway Terrace",
+                  "electoral_ward": "Moate"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Longford",
+          "population": 46634,
+          "average_age": 38.2,
+          "cities_towns": [
+            {
+              "name": "Longford",
+              "population": 10008,
+              "average_age": 38.6,
+              "male_population": 4900,
+              "female_population": 5108,
+              "male_children": 1050,
+              "female_children": 1000,
+              "marital_status_percentages": {
+                "single": 41.2,
+                "married": 44.3,
+                "separated": 3.2,
+                "divorced": 5.1,
+                "widowed": 6.2
+              },
+              "neighbourhood":[
+                {
+                  "name": "Battery Road",
+                  "postal_code": "N39",
+                  "townlands": "Longford",
+                  "electoral_ward": "Longford"
+                },
+                {
+                  "name": "Strokestown Road",
+                  "postal_code": "N39",
+                  "townlands": "Longford",
+                  "electoral_ward": "Longford"
+                },
+                {
+                  "name": "Ballymahon Street",
+                  "postal_code": "N39",
+                  "townlands": "Longford",
+                  "electoral_ward": "Longford"
+                },
+                {
+                  "name": "Richmond Street",
+                  "postal_code": "N39",
+                  "townlands": "Longford",
+                  "electoral_ward": "Longford"
+                },
+                {
+                  "name": "Temperance Street",
+                  "postal_code": "N39",
+                  "townlands": "Longford",
+                  "electoral_ward": "Longford"
+                }
+              ]
+            },
+            {
+              "name": "Granard",
+              "population": 1589,
+              "average_age": 39.8,
+              "male_population": 780,
+              "female_population": 809,
+              "male_children": 175,
+              "female_children": 165,
+              "marital_status_percentages": {
+                "single": 38.9,
+                "married": 46.1,
+                "separated": 3.4,
+                "divorced": 5.8,
+                "widowed": 5.8
+              },
+              "neighbourhood":[
+                {
+                  "name": "Main Street",
+                  "postal_code": "N39",
+                  "townlands": "Granard",
+                  "electoral_ward": "Granard"
+                },
+                {
+                  "name": "Church Street",
+                  "postal_code": "N39",
+                  "townlands": "Granard",
+                  "electoral_ward": "Granard"
+                },
+                {
+                  "name": "Market Square",
+                  "postal_code": "N39",
+                  "townlands": "Granard",
+                  "electoral_ward": "Granard"
+                },
+                {
+                  "name": "Bridge Street",
+                  "postal_code": "N39",
+                  "townlands": "Granard",
+                  "electoral_ward": "Granard"
+                },
+                {
+                  "name": "Ballinalee Road",
+                  "postal_code": "N39",
+                  "townlands": "Granard",
+                  "electoral_ward": "Granard"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Wexford",
+          "population": 163919,
+          "average_age": 39.1,
+          "cities_towns": [
+            {
+              "name": "Wexford",
+              "population": 21524,
+              "average_age": 38.5,
+              "male_population": 10600,
+              "female_population": 10924,
+              "male_children": 2400,
+              "female_children": 2300,
+              "marital_status_percentages": {
+                "single": 41.8,
+                "married": 44.1,
+                "separated": 3.3,
+                "divorced": 5.5,
+                "widowed": 5.3
+              },
+              "neighbourhood":[
+                {
+                  "name": "Redmond Square",
+                  "postal_code": "Y35",
+                  "townlands": "Wexford",
+                  "electoral_ward": "Wexford"
+                },
+                {
+                  "name": "The Bull Ring",
+                  "postal_code": "Y35",
+                  "townlands": "Wexford",
+                  "electoral_ward": "Wexford"
+                },
+                {
+                  "name": "Crescent Quay",
+                  "postal_code": "Y35",
+                  "townlands": "Wexford",
+                  "electoral_ward": "Wexford"
+                },
+                {
+                  "name": "Rowe Street",
+                  "postal_code": "Y35",
+                  "townlands": "Wexford",
+                  "electoral_ward": "Wexford"
+                },
+                {
+                  "name": "Talbot Green",
+                  "postal_code": "Y35",
+                  "townlands": "Wexford",
+                  "electoral_ward": "Wexford"
+                }
+              ]
+            },
+            {
+              "name": "Gorey",
+              "population": 9822,
+              "average_age": 37.2,
+              "male_population": 4850,
+              "female_population": 4972,
+              "male_children": 1100,
+              "female_children": 1050,
+              "marital_status_percentages": {
+                "single": 39.5,
+                "married": 46.8,
+                "separated": 3.1,
+                "divorced": 5.2,
+                "widowed": 5.4
+              },
+              "neighbourhood":[
+                {
+                  "name": "Main Street",
+                  "postal_code": "Y25",
+                  "townlands": "Gorey",
+                  "electoral_ward": "Gorey"
+                },
+                {
+                  "name": "Court Street",
+                  "postal_code": "Y25",
+                  "townlands": "Gorey",
+                  "electoral_ward": "Gorey"
+                },
+                {
+                  "name": "Railway Road",
+                  "postal_code": "Y25",
+                  "townlands": "Gorey",
+                  "electoral_ward": "Gorey"
+                },
+                {
+                  "name": "Esmonde Street",
+                  "postal_code": "Y25",
+                  "townlands": "Gorey",
+                  "electoral_ward": "Gorey"
+                },
+                {
+                  "name": "The Avenue",
+                  "postal_code": "Y25",
+                  "townlands": "Gorey",
+                  "electoral_ward": "Gorey"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Munster",
+      "population": 1373346,
+      "counties": [
+        {
+          "name": "Cork",
+          "population": 584156,
+          "average_age": 37.8,
+          "cities_towns": [
+            {
+              "name": "Cork City",
+              "electoral_ward": "Cork City",
+              "postal_code": "T12",
+              "population": 222526,
+              "average_age": 36.2,
+              "male_population": 109500,
+              "female_population": 113026,
+              "male_children": 22000,
+              "female_children": 21000,
+              "marital_status_percentages": {
+                "single": 51.9,
+                "married": 37.2,
+                "separated": 3.1,
+                "divorced": 4.5,
+                "widowed": 3.3
+              },
+              "neighbourhood": [
+                {
+                  "name": "City Centre",
+                  "postal_code": "T12 T85K",
+                  "townlands": "Cork City Centre",
+                  "electoral_ward": "Cork City South Central"
+                },
+                {
+                  "name": "Blackpool",
+                  "postal_code": "T23 R6W8",
+                  "townlands": "Blackpool",
+                  "electoral_ward": "Cork City North West"
+                },
+                {
+                  "name": "Douglas",
+                  "postal_code": "T12 V2N4",
+                  "townlands": "Douglas",
+                  "electoral_ward": "Cork City South East"
+                },
+                {
+                  "name": "Ballincollig",
+                  "postal_code": "P31 C9X7",
+                  "townlands": "Ballincollig",
+                  "electoral_ward": "Ballincollig-Carrigaline"
+                },
+                {
+                  "name": "Sunday's Well",
+                  "postal_code": "T12 H5P2",
+                  "townlands": "Sunday's Well",
+                  "electoral_ward": "Cork City North Central"
+                }
+              ]
+            },
+            {
+              "name": "Carrigaline",
+              "electoral_ward": "Cork East",
+              "postal_code": "P43",
+              "population": 18239,
+              "average_age": 35.4,
+              "male_population": 9000,
+              "female_population": 9239,
+              "male_children": 2000,
+              "female_children": 1950,
+              "marital_status_percentages": {
+                "single": 34.8,
+                "married": 52.1,
+                "separated": 2.7,
+                "divorced": 4.2,
+                "widowed": 6.2
+              },
+              "neighbourhood": [
+                {
+                  "name": "Main Street",
+                  "postal_code": "P43 W8K5",
+                  "townlands": "Carrigaline Town Centre",
+                  "electoral_ward": "Ballincollig-Carrigaline"
+                },
+                {
+                  "name": "Church Road",
+                  "postal_code": "P43 R3N7",
+                  "townlands": "Church Road",
+                  "electoral_ward": "Ballincollig-Carrigaline"
+                },
+                {
+                  "name": "Crosshaven Road",
+                  "postal_code": "P43 V6H2",
+                  "townlands": "Crosshaven Road",
+                  "electoral_ward": "Ballincollig-Carrigaline"
+                },
+                {
+                  "name": "Waterpark",
+                  "postal_code": "P43 T9E1",
+                  "townlands": "Waterpark",
+                  "electoral_ward": "Ballincollig-Carrigaline"
+                },
+                {
+                  "name": "Kilnagleary",
+                  "postal_code": "P43 X4C8",
+                  "townlands": "Kilnagleary",
+                  "electoral_ward": "Ballincollig-Carrigaline"
+                }
+              ]
+            },
+            {
+              "name": "Cobh",
+              "electoral_ward": "Cork East",
+              "postal_code": "P24",
+              "population": 14148,
+              "average_age": 38.1,
+              "male_population": 6950,
+              "female_population": 7198,
+              "male_children": 1500,
+              "female_children": 1450,
+              "marital_status_percentages": {
+                "single": 37.2,
+                "married": 48.1,
+                "separated": 3.1,
+                "divorced": 5.4,
+                "widowed": 6.2
+              },
+              "neighbourhood": [
+                {
+                  "name": "West Beach",
+                  "postal_code": "P24 Y7R4",
+                  "townlands": "West Beach",
+                  "electoral_ward": "Cobh"
+                },
+                {
+                  "name": "Promenade",
+                  "postal_code": "P24 K5W9",
+                  "townlands": "Promenade",
+                  "electoral_ward": "Cobh"
+                },
+                {
+                  "name": "Cathedral View",
+                  "postal_code": "P24 N8H3",
+                  "townlands": "Cathedral View",
+                  "electoral_ward": "Cobh"
+                },
+                {
+                  "name": "Rushbrooke",
+                  "postal_code": "P24 C2V6",
+                  "townlands": "Rushbrooke",
+                  "electoral_ward": "Cobh"
+                },
+                {
+                  "name": "Newtown",
+                  "postal_code": "P24 F1T8",
+                  "townlands": "Newtown",
+                  "electoral_ward": "Cobh"
+                }
+              ]
+            },
+            {
+              "name": "Mallow",
+              "electoral_ward": "Cork North West",
+              "postal_code": "P51",
+              "population": 12459,
+              "average_age": 38.5,
+              "male_population": 6100,
+              "female_population": 6359,
+              "male_children": 1350,
+              "female_children": 1300,
+              "marital_status_percentages": {
+                "single": 39.8,
+                "married": 45.2,
+                "separated": 3.2,
+                "divorced": 5.8,
+                "widowed": 6.0
+              },
+              "neighbourhood": [
+                {
+                  "name": "Bridge Street",
+                  "postal_code": "P51 K7W2",
+                  "townlands": "Mallow Town Centre",
+                  "electoral_ward": "Mallow"
+                },
+                {
+                  "name": "Main Street",
+                  "postal_code": "P51 R9H5",
+                  "townlands": "Main Street",
+                  "electoral_ward": "Mallow"
+                },
+                {
+                  "name": "Bank Place",
+                  "postal_code": "P51 V3E8",
+                  "townlands": "Bank Place",
+                  "electoral_ward": "Mallow"
+                },
+                {
+                  "name": "Spa Glen",
+                  "postal_code": "P51 N6T1",
+                  "townlands": "Spa Glen",
+                  "electoral_ward": "Mallow"
+                },
+                {
+                  "name": "Churchfield",
+                  "postal_code": "P51 Y4C9",
+                  "townlands": "Churchfield",
+                  "electoral_ward": "Mallow"
+                }
+              ]
+            },
+            {
+              "name": "Midleton",
+              "electoral_ward": "Cork East",
+              "postal_code": "P25",
+              "population": 12496,
+              "average_age": 37.2,
+              "male_population": 6150,
+              "female_population": 6346,
+              "male_children": 1400,
+              "female_children": 1350,
+              "marital_status_percentages": {
+                "single": 36.5,
+                "married": 49.8,
+                "separated": 3.0,
+                "divorced": 5.2,
+                "widowed": 5.5
+              },
+              "neighbourhood": [
+                {
+                  "name": "Main Street",
+                  "postal_code": "P25 T8K4",
+                  "townlands": "Midleton Town Centre",
+                  "electoral_ward": "Midleton"
+                },
+                {
+                  "name": "Market Green",
+                  "postal_code": "P25 W2V7",
+                  "townlands": "Market Green",
+                  "electoral_ward": "Midleton"
+                },
+                {
+                  "name": "Connolly Street",
+                  "postal_code": "P25 H9R3",
+                  "townlands": "Connolly Street",
+                  "electoral_ward": "Midleton"
+                },
+                {
+                  "name": "Broderick Street",
+                  "postal_code": "P25 C5N1",
+                  "townlands": "Broderick Street",
+                  "electoral_ward": "Midleton"
+                },
+                {
+                  "name": "Water Rock",
+                  "postal_code": "P25 F7E6",
+                  "townlands": "Water Rock",
+                  "electoral_ward": "Midleton"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Kerry",
+          "population": 156458,
+          "average_age": 40.2,
+          "cities_towns": [
+            {
+              "name": "Tralee",
+              "electoral_ward": "Kerry",
+              "postal_code": "V92",
+              "population": 26176,
+              "average_age": 39.1,
+              "male_population": 12900,
+              "female_population": 13276,
+              "male_children": 2800,
+              "female_children": 2650,
+              "marital_status_percentages": {
+                "single": 44.2,
+                "married": 42.8,
+                "separated": 3.2,
+                "divorced": 5.4,
+                "widowed": 4.4
+              },
+              "neighbourhood": [
+                {
+                  "name": "The Mall",
+                  "postal_code": "V92 HK89",
+                  "townlands": "Tralee Town Centre",
+                  "electoral_ward": "Tralee"
+                },
+                {
+                  "name": "Castle Street",
+                  "postal_code": "V92 P4W7",
+                  "townlands": "Castle Street",
+                  "electoral_ward": "Tralee"
+                },
+                {
+                  "name": "Rock Street",
+                  "postal_code": "V92 R8N2",
+                  "townlands": "Rock Street",
+                  "electoral_ward": "Tralee"
+                },
+                {
+                  "name": "Oakpark",
+                  "postal_code": "V92 C6T5",
+                  "townlands": "Oakpark",
+                  "electoral_ward": "Tralee"
+                },
+                {
+                  "name": "Ballymullen",
+                  "postal_code": "V92 X3H1",
+                  "townlands": "Ballymullen",
+                  "electoral_ward": "Tralee"
+                }
+              ]
+            },
+            {
+              "name": "Killarney",
+              "electoral_ward": "Kerry",
+              "postal_code": "V93",
+              "population": 15504,
+              "average_age": 37.8,
+              "male_population": 7600,
+              "female_population": 7904,
+              "male_children": 1650,
+              "female_children": 1580,
+              "marital_status_percentages": {
+                "single": 41.5,
+                "married": 44.2,
+                "separated": 3.1,
+                "divorced": 5.8,
+                "widowed": 5.4
+              },
+              "neighbourhood": [
+                {
+                  "name": "High Street",
+                  "postal_code": "V93 W9K4",
+                  "townlands": "Killarney Town Centre",
+                  "electoral_ward": "Killarney"
+                },
+                {
+                  "name": "New Street",
+                  "postal_code": "V93 T2V7",
+                  "townlands": "New Street",
+                  "electoral_ward": "Killarney"
+                },
+                {
+                  "name": "Park Road",
+                  "postal_code": "V93 H5R8",
+                  "townlands": "Park Road",
+                  "electoral_ward": "Killarney"
+                },
+                {
+                  "name": "Cathedral Place",
+                  "postal_code": "V93 N8E3",
+                  "townlands": "Cathedral Place",
+                  "electoral_ward": "Killarney"
+                },
+                {
+                  "name": "Countess Road",
+                  "postal_code": "V93 Y1C6",
+                  "townlands": "Countess Road",
+                  "electoral_ward": "Killarney"
+                }
+              ]
+            },
+            {
+              "name": "Listowel",
+              "electoral_ward": "Kerry",
+              "postal_code": "V31",
+              "population": 4820,
+              "average_age": 40.8,
+              "male_population": 2370,
+              "female_population": 2450,
+              "male_children": 535,
+              "female_children": 510,
+              "marital_status_percentages": {
+                "single": 38.5,
+                "married": 46.8,
+                "separated": 3.4,
+                "divorced": 5.9,
+                "widowed": 5.4
+              },
+              "neighbourhood": [
+                {
+                  "name": "The Square",
+                  "postal_code": "V31 K7H2",
+                  "townlands": "Listowel Town Centre",
+                  "electoral_ward": "Listowel"
+                },
+                {
+                  "name": "Church Street",
+                  "postal_code": "V31 P9W5",
+                  "townlands": "Church Street",
+                  "electoral_ward": "Listowel"
+                },
+                {
+                  "name": "William Street",
+                  "postal_code": "V31 R4T8",
+                  "townlands": "William Street",
+                  "electoral_ward": "Listowel"
+                },
+                {
+                  "name": "Bridge Road",
+                  "postal_code": "V31 C6N1",
+                  "townlands": "Bridge Road",
+                  "electoral_ward": "Listowel"
+                },
+                {
+                  "name": "Convent Street",
+                  "postal_code": "V31 X3E9",
+                  "townlands": "Convent Street",
+                  "electoral_ward": "Listowel"
+                }
+              ]
+            },
+            {
+              "name": "Cahersiveen",
+              "electoral_ward": "Kerry",
+              "postal_code": "V23",
+              "population": 1294,
+              "average_age": 42.1,
+              "male_population": 635,
+              "female_population": 659,
+              "male_children": 145,
+              "female_children": 140,
+              "marital_status_percentages": {
+                "single": 35.8,
+                "married": 48.2,
+                "separated": 3.6,
+                "divorced": 6.2,
+                "widowed": 6.2
+              },
+              "neighbourhood": [
+                {
+                  "name": "Main Street",
+                  "postal_code": "V23 F8R4",
+                  "townlands": "Cahersiveen Centre",
+                  "electoral_ward": "South Kerry"
+                },
+                {
+                  "name": "Church Street",
+                  "postal_code": "V23 H2K7",
+                  "townlands": "Church Street",
+                  "electoral_ward": "South Kerry"
+                },
+                {
+                  "name": "New Market Street",
+                  "postal_code": "V23 W5V1",
+                  "townlands": "New Market Street",
+                  "electoral_ward": "South Kerry"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Limerick",
+          "population": 209536,
+          "average_age": 37.9,
+          "cities_towns": [
+            {
+              "name": "Limerick City",
+              "electoral_ward": "Limerick City",
+              "postal_code": "V94",
+              "population": 102287,
+              "average_age": 36.8,
+              "male_population": 50500,
+              "female_population": 51787,
+              "male_children": 11200,
+              "female_children": 10700,
+              "marital_status_percentages": {
+                "single": 48.7,
+                "married": 39.2,
+                "separated": 3.4,
+                "divorced": 4.8,
+                "widowed": 3.9
+              },
+              "neighbourhood": [
+                {
+                  "name": "King's Island",
+                  "postal_code": "V94 C928",
+                  "townlands": "King's Island",
+                  "electoral_ward": "Limerick City East"
+                },
+                {
+                  "name": "Georgian Quarter",
+                  "postal_code": "V94 W5P3",
+                  "townlands": "Georgian Quarter",
+                  "electoral_ward": "Limerick City South"
+                },
+                {
+                  "name": "Newtown Pery",
+                  "postal_code": "V94 T7K8",
+                  "townlands": "Newtown Pery",
+                  "electoral_ward": "Limerick City South"
+                },
+                {
+                  "name": "Thomondgate",
+                  "postal_code": "V94 N2H6",
+                  "townlands": "Thomondgate",
+                  "electoral_ward": "Limerick City North"
+                },
+                {
+                  "name": "Southill",
+                  "postal_code": "V94 R9E1",
+                  "townlands": "Southill",
+                  "electoral_ward": "Limerick City West"
+                }
+              ]
+            },
+            {
+              "name": "Newcastle West",
+              "electoral_ward": "Limerick West",
+              "postal_code": "V42",
+              "population": 6619,
+              "average_age": 39.4,
+              "male_population": 3250,
+              "female_population": 3369,
+              "male_children": 735,
+              "female_children": 705,
+              "marital_status_percentages": {
+                "single": 37.8,
+                "married": 47.2,
+                "separated": 3.4,
+                "divorced": 5.9,
+                "widowed": 5.7
+              },
+              "neighbourhood": [
+                {
+                  "name": "The Square",
+                  "postal_code": "V42 X6W9",
+                  "townlands": "Newcastle West Centre",
+                  "electoral_ward": "Newcastle West"
+                },
+                {
+                  "name": "Bishop Street",
+                  "postal_code": "V42 K4R2",
+                  "townlands": "Bishop Street",
+                  "electoral_ward": "Newcastle West"
+                },
+                {
+                  "name": "Maiden Street",
+                  "postal_code": "V42 P7H5",
+                  "townlands": "Maiden Street",
+                  "electoral_ward": "Newcastle West"
+                },
+                {
+                  "name": "Churchtown",
+                  "postal_code": "V42 C1N8",
+                  "townlands": "Churchtown",
+                  "electoral_ward": "Newcastle West"
+                },
+                {
+                  "name": "Gortboy",
+                  "postal_code": "V42 T9E3",
+                  "townlands": "Gortboy",
+                  "electoral_ward": "Newcastle West"
+                }
+              ]
+            },
+            {
+              "name": "Rathkeale",
+              "electoral_ward": "Limerick West",
+              "postal_code": "V35",
+              "population": 1845,
+              "average_age": 38.7,
+              "male_population": 905,
+              "female_population": 940,
+              "male_children": 205,
+              "female_children": 195,
+              "marital_status_percentages": {
+                "single": 39.2,
+                "married": 46.1,
+                "separated": 3.5,
+                "divorced": 5.8,
+                "widowed": 5.4
+              },
+              "neighbourhood": [
+                {
+                  "name": "Main Street",
+                  "postal_code": "V35 Y8V4",
+                  "townlands": "Rathkeale Centre",
+                  "electoral_ward": "Adare-Rathkeale"
+                },
+                {
+                  "name": "Castle Matrix",
+                  "postal_code": "V35 H2T7",
+                  "townlands": "Castle Matrix",
+                  "electoral_ward": "Adare-Rathkeale"
+                },
+                {
+                  "name": "Chapel Street",
+                  "postal_code": "V35 W5K1",
+                  "townlands": "Chapel Street",
+                  "electoral_ward": "Adare-Rathkeale"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Clare",
+          "population": 127938,
+          "average_age": 38.9,
+          "cities_towns": [
+            {
+              "name": "Ennis",
+              "electoral_ward": "Clare",
+              "postal_code": "V95",
+              "population": 27923,
+              "average_age": 37.4,
+              "male_population": 13700,
+              "female_population": 14223,
+              "male_children": 3100,
+              "female_children": 2950,
+              "marital_status_percentages": {
+                "single": 42.8,
+                "married": 44.1,
+                "separated": 3.0,
+                "divorced": 5.2,
+                "widowed": 4.9
+              },
+              "neighbourhood": [
+                {
+                  "name": "O'Connell Street",
+                  "postal_code": "V95 E6W2",
+                  "townlands": "Ennis Town Centre",
+                  "electoral_ward": "Ennis"
+                },
+                {
+                  "name": "Abbey Street",
+                  "postal_code": "V95 K9H4",
+                  "townlands": "Abbey Street",
+                  "electoral_ward": "Ennis"
+                },
+                {
+                  "name": "Mill Road",
+                  "postal_code": "V95 T3V7",
+                  "townlands": "Mill Road",
+                  "electoral_ward": "Ennis"
+                },
+                {
+                  "name": "Clonroad Beg",
+                  "postal_code": "V95 R8C1",
+                  "townlands": "Clonroad Beg",
+                  "electoral_ward": "Ennis"
+                },
+                {
+                  "name": "Shanaway Road",
+                  "postal_code": "V95 N5P6",
+                  "townlands": "Shanaway Road",
+                  "electoral_ward": "Ennis"
+                }
+              ]
+            },
+            {
+              "name": "Shannon",
+              "electoral_ward": "Clare",
+              "postal_code": "V14",
+              "population": 10256,
+              "average_age": 36.2,
+              "male_population": 5100,
+              "female_population": 5156,
+              "male_children": 1150,
+              "female_children": 1100,
+              "marital_status_percentages": {
+                "single": 44.1,
+                "married": 42.8,
+                "separated": 3.1,
+                "divorced": 5.2,
+                "widowed": 4.8
+              },
+              "neighbourhood": [
+                {
+                  "name": "Town Centre",
+                  "postal_code": "V14 C7K3",
+                  "townlands": "Shannon Town Centre",
+                  "electoral_ward": "Shannon"
+                },
+                {
+                  "name": "Tullyvarraga",
+                  "postal_code": "V14 W4R9",
+                  "townlands": "Tullyvarraga",
+                  "electoral_ward": "Shannon"
+                },
+                {
+                  "name": "Drumgeely",
+                  "postal_code": "V14 P8H5",
+                  "townlands": "Drumgeely",
+                  "electoral_ward": "Shannon"
+                },
+                {
+                  "name": "Smithstown",
+                  "postal_code": "V14 X2N1",
+                  "townlands": "Smithstown",
+                  "electoral_ward": "Shannon"
+                },
+                {
+                  "name": "Cluain Airne",
+                  "postal_code": "V14 F6E8",
+                  "townlands": "Cluain Airne",
+                  "electoral_ward": "Shannon"
+                }
+              ]
+            },
+            {
+              "name": "Kilrush",
+              "electoral_ward": "Clare",
+              "postal_code": "V15",
+              "population": 2719,
+              "average_age": 41.5,
+              "male_population": 1335,
+              "female_population": 1384,
+              "male_children": 300,
+              "female_children": 285,
+              "marital_status_percentages": {
+                "single": 36.2,
+                "married": 47.8,
+                "separated": 3.5,
+                "divorced": 6.1,
+                "widowed": 6.4
+              },
+              "neighbourhood": [
+                {
+                  "name": "Frances Street",
+                  "postal_code": "V15 Y9T4",
+                  "townlands": "Kilrush Centre",
+                  "electoral_ward": "West Clare"
+                },
+                {
+                  "name": "Market Square",
+                  "postal_code": "V15 K2W7",
+                  "townlands": "Market Square",
+                  "electoral_ward": "West Clare"
+                },
+                {
+                  "name": "Henry Street",
+                  "postal_code": "V15 H5R1",
+                  "townlands": "Henry Street",
+                  "electoral_ward": "West Clare"
+                },
+                {
+                  "name": "Toler Street",
+                  "postal_code": "V15 C8V3",
+                  "townlands": "Toler Street",
+                  "electoral_ward": "West Clare"
+                }
+              ]
+            },
+            {
+              "name": "Ennistymon",
+              "electoral_ward": "Clare",
+              "postal_code": "V95",
+              "population": 1137,
+              "average_age": 39.8,
+              "male_population": 560,
+              "female_population": 577,
+              "male_children": 125,
+              "female_children": 120,
+              "marital_status_percentages": {
+                "single": 38.5,
+                "married": 46.2,
+                "separated": 3.4,
+                "divorced": 5.8,
+                "widowed": 6.1
+              },
+              "neighbourhood": [
+                {
+                  "name": "Main Street",
+                  "postal_code": "V95 N6P2",
+                  "townlands": "Ennistymon Centre",
+                  "electoral_ward": "West Clare"
+                },
+                {
+                  "name": "Church Street",
+                  "postal_code": "V95 T4H8",
+                  "townlands": "Church Street",
+                  "electoral_ward": "West Clare"
+                },
+                {
+                  "name": "Falls Road",
+                  "postal_code": "V95 W7E5",
+                  "townlands": "Falls Road",
+                  "electoral_ward": "West Clare"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Tipperary",
+          "population": 167895,
+          "average_age": 39.1,
+          "cities_towns": [
+            {
+              "name": "Clonmel",
+              "electoral_ward": "Tipperary South",
+              "postal_code": "E91",
+              "population": 18369,
+              "average_age": 39.3,
+              "male_population": 9000,
+              "female_population": 9369,
+              "male_children": 1900,
+              "female_children": 1850,
+              "marital_status_percentages": {
+                "single": 40.5,
+                "married": 45.2,
+                "separated": 3.4,
+                "divorced": 5.8,
+                "widowed": 5.1
+              },
+              "neighbourhood": [
+                {
+                  "name": "O'Connell Street",
+                  "postal_code": "E91 H4K7",
+                  "townlands": "Clonmel Centre",
+                  "electoral_ward": "Clonmel"
+                },
+                {
+                  "name": "Gladstone Street",
+                  "postal_code": "E91 W2V5",
+                  "townlands": "Gladstone Street",
+                  "electoral_ward": "Clonmel"
+                },
+                {
+                  "name": "Parnell Street",
+                  "postal_code": "E91 R8N3",
+                  "townlands": "Parnell Street",
+                  "electoral_ward": "Clonmel"
+                },
+                {
+                  "name": "Western Road",
+                  "postal_code": "E91 C6T1",
+                  "townlands": "Western Road",
+                  "electoral_ward": "Clonmel"
+                },
+                {
+                  "name": "Old Bridge",
+                  "postal_code": "E91 X9P8",
+                  "townlands": "Old Bridge",
+                  "electoral_ward": "Clonmel"
+                }
+              ]
+            },
+            {
+              "name": "Thurles",
+              "electoral_ward": "Tipperary North",
+              "postal_code": "E41",
+              "population": 9196,
+              "average_age": 40.2,
+              "male_population": 4500,
+              "female_population": 4696,
+              "male_children": 1000,
+              "female_children": 950,
+              "marital_status_percentages": {
+                "single": 38.9,
+                "married": 46.5,
+                "separated": 3.3,
+                "divorced": 5.7,
+                "widowed": 5.6
+              },
+              "neighbourhood": [
+                {
+                  "name": "Liberty Square",
+                  "postal_code": "E41 K5H2",
+                  "townlands": "Thurles Centre",
+                  "electoral_ward": "Thurles"
+                },
+                {
+                  "name": "Parnell Street",
+                  "postal_code": "E41 P9W6",
+                  "townlands": "Parnell Street",
+                  "electoral_ward": "Thurles"
+                },
+                {
+                  "name": "Friar Street",
+                  "postal_code": "E41 T3R4",
+                  "townlands": "Friar Street",
+                  "electoral_ward": "Thurles"
+                },
+                {
+                  "name": "Cathedral Street",
+                  "postal_code": "E41 V7C9",
+                  "townlands": "Cathedral Street",
+                  "electoral_ward": "Thurles"
+                },
+                {
+                  "name": "Kickham Street",
+                  "postal_code": "E41 N1E8",
+                  "townlands": "Kickham Street",
+                  "electoral_ward": "Thurles"
+                }
+              ]
+            },
+            {
+              "name": "Nenagh",
+              "electoral_ward": "Tipperary North",
+              "postal_code": "E45",
+              "population": 9347,
+              "average_age": 39.8,
+              "male_population": 4580,
+              "female_population": 4767,
+              "male_children": 1025,
+              "female_children": 980,
+              "marital_status_percentages": {
+                "single": 39.4,
+                "married": 45.8,
+                "separated": 3.2,
+                "divorced": 5.9,
+                "widowed": 5.7
+              },
+              "neighbourhood": [
+                {
+                  "name": "Pearse Street",
+                  "postal_code": "E45 Y4K7",
+                  "townlands": "Nenagh Centre",
+                  "electoral_ward": "Nenagh"
+                },
+                {
+                  "name": "Kenyon Street",
+                  "postal_code": "E45 H8V3",
+                  "townlands": "Kenyon Street",
+                  "electoral_ward": "Nenagh"
+                },
+                {
+                  "name": "Sarsfield Street",
+                  "postal_code": "E45 R2N5",
+                  "townlands": "Sarsfield Street",
+                  "electoral_ward": "Nenagh"
+                },
+                {
+                  "name": "Silver Street",
+                  "postal_code": "E45 W6T1",
+                  "townlands": "Silver Street",
+                  "electoral_ward": "Nenagh"
+                },
+                {
+                  "name": "Castle Street",
+                  "postal_code": "E45 C9P8",
+                  "townlands": "Castle Street",
+                  "electoral_ward": "Nenagh"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Waterford",
+          "population": 167895,
+          "average_age": 39.1,
+          "cities_towns": [
+            {
+              "name": "Waterford City",
+              "electoral_ward": "Waterford",
+              "postal_code": "X91",
+              "population": 53713,
+              "average_age": 38.5,
+              "male_population": 26400,
+              "female_population": 27313,
+              "male_children": 5280,
+              "female_children": 5100,
+              "marital_status_percentages": {
+                "single": 42.1,
+                "married": 43.8,
+                "separated": 3.2,
+                "divorced": 6.1,
+                "widowed": 4.8
+              },
+              "neighbourhood": [
+                {
+                  "name": "The Quay",
+                  "postal_code": "X91 V4W8",
+                  "townlands": "Waterford City Centre",
+                  "electoral_ward": "Waterford City South"
+                },
+                {
+                  "name": "Barronstrand Street",
+                  "postal_code": "X91 H7K2",
+                  "townlands": "Barronstrand Street",
+                  "electoral_ward": "Waterford City South"
+                },
+                {
+                  "name": "John Street",
+                  "postal_code": "X91 P3R6",
+                  "townlands": "John Street",
+                  "electoral_ward": "Waterford City South"
+                },
+                {
+                  "name": "Ballybricken",
+                  "postal_code": "X91 T9E1",
+                  "townlands": "Ballybricken",
+                  "electoral_ward": "Waterford City East"
+                },
+                {
+                  "name": "Ferrybank",
+                  "postal_code": "X91 C5N9",
+                  "townlands": "Ferrybank",
+                  "electoral_ward": "Waterford City West"
+                }
+              ]
+            },
+            {
+              "name": "Tramore",
+              "electoral_ward": "Waterford",
+              "postal_code": "X91",
+              "population": 11277,
+              "average_age": 39.8,
+              "male_population": 5520,
+              "female_population": 5757,
+              "male_children": 1100,
+              "female_children": 1065,
+              "marital_status_percentages": {
+                "single": 38.5,
+                "married": 47.2,
+                "separated": 3.4,
+                "divorced": 5.8,
+                "widowed": 5.1
+              },
+              "neighbourhood": [
+                {
+                  "name": "Main Street",
+                  "postal_code": "X91 K8H4",
+                  "townlands": "Tramore Centre",
+                  "electoral_ward": "Tramore-Waterford City West"
+                },
+                {
+                  "name": "The Prom",
+                  "postal_code": "X91 W5V2",
+                  "townlands": "The Prom",
+                  "electoral_ward": "Tramore-Waterford City West"
+                },
+                {
+                  "name": "Queen Street",
+                  "postal_code": "X91 R9T7",
+                  "townlands": "Queen Street",
+                  "electoral_ward": "Tramore-Waterford City West"
+                },
+                {
+                  "name": "Strand Street",
+                  "postal_code": "X91 N3C6",
+                  "townlands": "Strand Street",
+                  "electoral_ward": "Tramore-Waterford City West"
+                },
+                {
+                  "name": "Newtown Hill",
+                  "postal_code": "X91 F7P1",
+                  "townlands": "Newtown Hill",
+                  "electoral_ward": "Tramore-Waterford City West"
+                }
+              ]
+            },
+            {
+              "name": "Dungarvan",
+              "electoral_ward": "Waterford",
+              "postal_code": "X35",
+              "population": 10081,
+              "average_age": 39.2,
+              "male_population": 4950,
+              "female_population": 5131,
+              "male_children": 1050,
+              "female_children": 1000,
+              "marital_status_percentages": {
+                "single": 37.9,
+                "married": 47.5,
+                "separated": 3.3,
+                "divorced": 5.8,
+                "widowed": 5.5
+              },
+              "neighbourhood": [
+                {
+                  "name": "Grattan Square",
+                  "postal_code": "X35 Y6K9",
+                  "townlands": "Dungarvan Centre",
+                  "electoral_ward": "Dungarvan"
+                },
+                {
+                  "name": "O'Connell Street",
+                  "postal_code": "X35 H2W4",
+                  "townlands": "O'Connell Street",
+                  "electoral_ward": "Dungarvan"
+                },
+                {
+                  "name": "Main Street",
+                  "postal_code": "X35 P8R3",
+                  "townlands": "Main Street",
+                  "electoral_ward": "Dungarvan"
+                },
+                {
+                  "name": "Davitt's Quay",
+                  "postal_code": "X35 T5V7",
+                  "townlands": "Davitt's Quay",
+                  "electoral_ward": "Dungarvan"
+                },
+                {
+                  "name": "Youghal Road",
+                  "postal_code": "X35 C1N8",
+                  "townlands": "Youghal Road",
+                  "electoral_ward": "Dungarvan"
+                }
+              ]
+            },
+            {
+              "name": "Lismore",
+              "electoral_ward": "Waterford",
+              "postal_code": "P51",
+              "population": 1375,
+              "average_age": 42.3,
+              "male_population": 675,
+              "female_population": 700,
+              "male_children": 135,
+              "female_children": 130,
+              "marital_status_percentages": {
+                "single": 35.2,
+                "married": 50.1,
+                "separated": 3.5,
+                "divorced": 4.8,
+                "widowed": 6.4
+              },
+              "neighbourhood": [
+                {
+                  "name": "Main Street",
+                  "postal_code": "P51 X4H7",
+                  "townlands": "Lismore Centre",
+                  "electoral_ward": "Lismore"
+                },
+                {
+                  "name": "Castle Avenue",
+                  "postal_code": "P51 W9K2",
+                  "townlands": "Castle Avenue",
+                  "electoral_ward": "Lismore"
+                },
+                {
+                  "name": "West Street",
+                  "postal_code": "P51 R5T8",
+                  "townlands": "West Street",
+                  "electoral_ward": "Lismore"
+                }
+              ]
+            },
+            {
+              "name": "Cappoquin",
+              "electoral_ward": "Waterford",
+              "postal_code": "P51",
+              "population": 865,
+              "average_age": 43.1,
+              "male_population": 425,
+              "female_population": 440,
+              "male_children": 85,
+              "female_children": 80,
+              "marital_status_percentages": {
+                "single": 33.8,
+                "married": 51.2,
+                "separated": 3.2,
+                "divorced": 4.6,
+                "widowed": 7.2
+              },
+              "neighbourhood": [
+                {
+                  "name": "The Square",
+                  "postal_code": "P51 C6V3",
+                  "townlands": "Cappoquin Centre",
+                  "electoral_ward": "Lismore"
+                },
+                {
+                  "name": "Cook Street",
+                  "postal_code": "P51 N8E1",
+                  "townlands": "Cook Street",
+                  "electoral_ward": "Lismore"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Connacht",
+      "population": 581947,
+      "counties": [
+        {
+          "name": "Galway",
+          "population": 276451,
+          "average_age": 37.8,
+          "cities_towns": [
+            {
+              "name": "Galway City",
+              "postal_code": "H91",
+              "electoral_ward": "Galway City",
+              "population": 85910,
+              "average_age": 34.2,
+              "male_population": 42200,
+              "female_population": 43710,
+              "male_children": 8900,
+              "female_children": 8500,
+              "marital_status_percentages": {
+                "single": 57.8,
+                "married": 32.1,
+                "separated": 2.8,
+                "divorced": 4.2,
+                "widowed": 3.1
+              },
+              "neighbourhood": [
+                {
+                  "name": "Eyre Square",
+                  "postal_code": "H91 C9W8",
+                  "townlands": "Galway City Centre",
+                  "electoral_ward": "Galway City Central"
+                },
+                {
+                  "name": "The Claddagh",
+                  "postal_code": "H91 F2X4",
+                  "townlands": "Claddagh",
+                  "electoral_ward": "Galway City West"
+                },
+                {
+                  "name": "Salthill",
+                  "postal_code": "H91 Y9P7",
+                  "townlands": "Salthill",
+                  "electoral_ward": "Galway City West"
+                },
+                {
+                  "name": "Newcastle",
+                  "postal_code": "H91 V6R2",
+                  "townlands": "Newcastle",
+                  "electoral_ward": "Galway City West"
+                },
+                {
+                  "name": "Shantalla",
+                  "postal_code": "H91 P8K5",
+                  "townlands": "Shantalla",
+                  "electoral_ward": "Galway City East"
+                }
+              ]
+            },
+            {
+              "name": "Tuam",
+              "postal_code": "H54",
+              "electoral_ward": "Tuam Local Electoral Area",
+              "population": 8767,
+              "average_age": 38.9,
+              "male_population": 4300,
+              "female_population": 4467,
+              "male_children": 975,
+              "female_children": 925,
+              "marital_status_percentages": {
+                "single": 40.2,
+                "married": 45.8,
+                "separated": 3.1,
+                "divorced": 5.4,
+                "widowed": 5.5
+              },
+              "neighbourhood": [
+                {
+                  "name": "High Street",
+                  "postal_code": "H54 C8V1",
+                  "townlands": "Tuam Town Centre",
+                  "electoral_ward": "Tuam"
+                },
+                {
+                  "name": "Bishop Street",
+                  "postal_code": "H54 N5R9",
+                  "townlands": "Bishop Street",
+                  "electoral_ward": "Tuam"
+                },
+                {
+                  "name": "Galway Road",
+                  "postal_code": "H54 W3X7",
+                  "townlands": "Galway Road",
+                  "electoral_ward": "Tuam"
+                },
+                {
+                  "name": "Mill Street",
+                  "postal_code": "H54 T2E6",
+                  "townlands": "Mill Street",
+                  "electoral_ward": "Tuam"
+                },
+                {
+                  "name": "Athenry Road",
+                  "postal_code": "H54 K9H4",
+                  "townlands": "Athenry Road",
+                  "electoral_ward": "Tuam"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Mayo",
+          "population": 137231,
+          "average_age": 41.2,
+          "cities_towns": [
+            {
+              "name": "Castlebar",
+              "postal_code": "F23",
+              "electoral_ward": "Castlebar Municipal District",
+              "population": 13054,
+              "average_age": 37.8,
+              "male_population": 6400,
+              "female_population": 6654,
+              "male_children": 1400,
+              "female_children": 1350,
+              "marital_status_percentages": {
+                "single": 41.2,
+                "married": 44.8,
+                "separated": 3.1,
+                "divorced": 5.2,
+                "widowed": 5.7
+              },
+              "neighbourhood": [
+                {
+                  "name": "Main Street",
+                  "postal_code": "F23 X8W2",
+                  "townlands": "Castlebar Town Centre",
+                  "electoral_ward": "Castlebar"
+                },
+                {
+                  "name": "New Antrim Street",
+                  "postal_code": "F23 P5V9",
+                  "townlands": "New Antrim",
+                  "electoral_ward": "Castlebar"
+                },
+                {
+                  "name": "Ellison Street",
+                  "postal_code": "F23 R7C4",
+                  "townlands": "Ellison Street",
+                  "electoral_ward": "Castlebar"
+                },
+                {
+                  "name": "Knock Road",
+                  "postal_code": "F23 N3F1",
+                  "townlands": "Knock Road",
+                  "electoral_ward": "Castlebar"
+                },
+                {
+                  "name": "Westport Road",
+                  "postal_code": "F23 H6T8",
+                  "townlands": "Westport Road",
+                  "electoral_ward": "Castlebar"
+                }
+              ]
+            },
+            {
+              "name": "Ballina",
+              "postal_code": "F26",
+              "electoral_ward": "Ballina Municipal District",
+              "population": 10556,
+              "average_age": 39.4,
+              "male_population": 5150,
+              "female_population": 5406,
+              "male_children": 1100,
+              "female_children": 1050,
+              "marital_status_percentages": {
+                "single": 38.7,
+                "married": 46.8,
+                "separated": 3.4,
+                "divorced": 5.2,
+                "widowed": 5.9
+              },
+              "neighbourhood": [
+                {
+                  "name": "Pearse Street",
+                  "postal_code": "F26 Y4R7",
+                  "townlands": "Ballina Town Centre",
+                  "electoral_ward": "Ballina"
+                },
+                {
+                  "name": "Teeling Street",
+                  "postal_code": "F26 W9E3",
+                  "townlands": "Teeling Street",
+                  "electoral_ward": "Ballina"
+                },
+                {
+                  "name": "Tone Street",
+                  "postal_code": "F26 K5H2",
+                  "townlands": "Tone Street",
+                  "electoral_ward": "Ballina"
+                },
+                {
+                  "name": "Killala Road",
+                  "postal_code": "F26 T8C1",
+                  "townlands": "Killala Road",
+                  "electoral_ward": "Ballina"
+                },
+                {
+                  "name": "Foxford Road",
+                  "postal_code": "F26 V6N9",
+                  "townlands": "Foxford Road",
+                  "electoral_ward": "Ballina"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Roscommon",
+          "population": 69490,
+          "average_age": 42.1,
+          "cities_towns": [
+            {
+              "name": "Roscommon",
+              "postal_code": "F42",
+              "electoral_ward": "Roscommon Electoral Area",
+              "population": 5876,
+              "average_age": 41.8,
+              "male_population": 2900,
+              "female_population": 2976,
+              "male_children": 650,
+              "female_children": 625,
+              "marital_status_percentages": {
+                "single": 35.8,
+                "married": 48.2,
+                "separated": 3.2,
+                "divorced": 6.1,
+                "widowed": 6.7
+              },
+              "neighbourhood": [
+                {
+                  "name": "Main Street",
+                  "postal_code": "F42 X7K3",
+                  "townlands": "Roscommon Town Centre",
+                  "electoral_ward": "Roscommon"
+                },
+                {
+                  "name": "Castle Street",
+                  "postal_code": "F42 P2W8",
+                  "townlands": "Castle Street",
+                  "electoral_ward": "Roscommon"
+                },
+                {
+                  "name": "Circular Road",
+                  "postal_code": "F42 C9R5",
+                  "townlands": "Circular Road",
+                  "electoral_ward": "Roscommon"
+                },
+                {
+                  "name": "Athlone Road",
+                  "postal_code": "F42 N4T1",
+                  "townlands": "Athlone Road",
+                  "electoral_ward": "Roscommon"
+                },
+                {
+                  "name": "Galway Road",
+                  "postal_code": "F42 H8E6",
+                  "townlands": "Galway Road",
+                  "electoral_ward": "Roscommon"
+                }
+              ]
+            },
+            {
+              "name": "Boyle",
+              "postal_code": "F52",
+              "electoral_ward": "Boyle Electoral Area",
+              "population": 2568,
+              "average_age": 43.2,
+              "male_population": 1260,
+              "female_population": 1308,
+              "male_children": 285,
+              "female_children": 270,
+              "marital_status_percentages": {
+                "single": 33.5,
+                "married": 49.8,
+                "separated": 3.5,
+                "divorced": 6.8,
+                "widowed": 6.4
+              },
+              "neighbourhood": [
+                {
+                  "name": "King Street",
+                  "postal_code": "F52 Y5V2",
+                  "townlands": "Boyle Town Centre",
+                  "electoral_ward": "Boyle"
+                },
+                {
+                  "name": "Patrick Street",
+                  "postal_code": "F52 W7H9",
+                  "townlands": "Patrick Street",
+                  "electoral_ward": "Boyle"
+                },
+                {
+                  "name": "Bridge Street",
+                  "postal_code": "F52 K1C4",
+                  "townlands": "Bridge Street",
+                  "electoral_ward": "Boyle"
+                },
+                {
+                  "name": "Carrick Road",
+                  "postal_code": "F52 T3N8",
+                  "townlands": "Carrick Road",
+                  "electoral_ward": "Boyle"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Sligo",
+          "population": 70198,
+          "average_age": 40.5,
+          "cities_towns": [
+            {
+              "name": "Sligo",
+              "postal_code": "F91",
+              "electoral_ward": "Sligo-Drumcliff Local Electoral Areas",
+              "population": 20008,
+              "average_age": 38.2,
+              "male_population": 9800,
+              "female_population": 10208,
+              "male_children": 2200,
+              "female_children": 2100,
+              "marital_status_percentages": {
+                "single": 45.1,
+                "married": 42.2,
+                "separated": 3.2,
+                "divorced": 5.5,
+                "widowed": 4.0
+              },
+              "neighbourhood": [
+                {
+                  "name": "O'Connell Street",
+                  "postal_code": "F91 X5P8",
+                  "townlands": "Sligo Town Centre",
+                  "electoral_ward": "Sligo-Strandhill"
+                },
+                {
+                  "name": "Wine Street",
+                  "postal_code": "F91 H2Y7",
+                  "townlands": "Wine Street",
+                  "electoral_ward": "Sligo-Strandhill"
+                },
+                {
+                  "name": "Castle Street",
+                  "postal_code": "F91 C9K4",
+                  "townlands": "Castle Street",
+                  "electoral_ward": "Sligo-Strandhill"
+                },
+                {
+                  "name": "Pearse Road",
+                  "postal_code": "F91 V1W6",
+                  "townlands": "Pearse Road",
+                  "electoral_ward": "Sligo-Strandhill"
+                },
+                {
+                  "name": "Riverside",
+                  "postal_code": "F91 T8R3",
+                  "townlands": "Riverside",
+                  "electoral_ward": "Sligo-Strandhill"
+                }
+              ]
+            },
+            {
+              "name": "Enniscrone",
+              "postal_code": "F26",
+              "electoral_ward": "West Sligo Local Electoral Area",
+              "population": 1015,
+              "average_age": 42.8,
+              "male_population": 495,
+              "female_population": 520,
+              "male_children": 115,
+              "female_children": 110,
+              "marital_status_percentages": {
+                "single": 32.1,
+                "married": 51.2,
+                "separated": 3.8,
+                "divorced": 6.5,
+                "widowed": 6.4
+              },
+              "neighbourhood": [
+                {
+                  "name": "Main Street",
+                  "postal_code": "F26 N7E5",
+                  "townlands": "Enniscrone Village",
+                  "electoral_ward": "Enniscrone-Kilglass"
+                },
+                {
+                  "name": "Pier Road",
+                  "postal_code": "F26 R4K2",
+                  "townlands": "Pier Road",
+                  "electoral_ward": "Enniscrone-Kilglass"
+                },
+                {
+                  "name": "Beach Road",
+                  "postal_code": "F26 W9T1",
+                  "townlands": "Beach Road",
+                  "electoral_ward": "Enniscrone-Kilglass"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Leitrim",
+          "population": 35087,
+          "average_age": 43.8,
+          "cities_towns": [
+            {
+              "name": "Carrick-on-Shannon",
+              "electoral_ward": "Carrick-on-Shannon Municipal District",
+              "postal_code": "N41",
+              "population": 4062,
+              "average_age": 41.5,
+              "male_population": 2000,
+              "female_population": 2062,
+              "male_children": 450,
+              "female_children": 430,
+              "marital_status_percentages": {
+                "single": 36.8,
+                "married": 47.2,
+                "separated": 3.4,
+                "divorced": 6.1,
+                "widowed": 6.5
+              },
+              "neighbourhood": [
+                {
+                  "name": "Bridge Street",
+                  "postal_code": "N41 X2V8",
+                  "townlands": "Carrick-on-Shannon Centre",
+                  "electoral_ward": "Carrick-on-Shannon"
+                },
+                {
+                  "name": "Main Street",
+                  "postal_code": "N41 P7W4",
+                  "townlands": "Main Street",
+                  "electoral_ward": "Carrick-on-Shannon"
+                },
+                {
+                  "name": "St. George's Terrace",
+                  "postal_code": "N41 C1H9",
+                  "townlands": "St. George's Terrace",
+                  "electoral_ward": "Carrick-on-Shannon"
+                },
+                {
+                  "name": "Quay Road",
+                  "postal_code": "N41 K5R3",
+                  "townlands": "Quay Road",
+                  "electoral_ward": "Carrick-on-Shannon"
+                },
+                {
+                  "name": "Cortober",
+                  "postal_code": "N41 T8E6",
+                  "townlands": "Cortober",
+                  "electoral_ward": "Carrick-on-Shannon"
+                }
+              ]
+            },
+            {
+              "name": "Manorhamilton",
+              "postal_code": "F91",
+              "electoral_ward": "Manorhamilton Municipal District",
+              "population": 1758,
+              "average_age": 44.2,
+              "male_population": 865,
+              "female_population": 893,
+              "male_children": 195,
+              "female_children": 185,
+              "marital_status_percentages": {
+                "single": 34.2,
+                "married": 48.8,
+                "separated": 3.6,
+                "divorced": 6.8,
+                "widowed": 6.6
+              },
+              "neighbourhood": [
+                {
+                  "name": "Main Street",
+                  "postal_code": "F91 H4N7",
+                  "townlands": "Manorhamilton Centre",
+                  "electoral_ward": "Manorhamilton"
+                },
+                {
+                  "name": "Castle Street",
+                  "postal_code": "F91 Y2C5",
+                  "townlands": "Castle Street",
+                  "electoral_ward": "Manorhamilton"
+                },
+                {
+                  "name": "Sligo Road",
+                  "postal_code": "F91 W8K1",
+                  "townlands": "Sligo Road",
+                  "electoral_ward": "Manorhamilton"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ulster",
+      "population": 335854,
+      "counties": [
+        {
+          "name": "Donegal",
+          "population": 166706,
+          "average_age": 40.8,
+          "cities_towns": [
+            {
+              "name": "Letterkenny",
+              "postal_code": "F92",
+              "electoral_ward": "Letterkenny Local Electoral Area",
+              "population": 19588,
+              "average_age": 37.8,
+              "male_population": 9600,
+              "female_population": 9988,
+              "male_children": 2150,
+              "female_children": 2050,
+              "marital_status_percentages": {
+                "single": 44.8,
+                "married": 42.1,
+                "separated": 3.3,
+                "divorced": 5.2,
+                "widowed": 4.6
+              },
+              "neighbourhood": [
+                {
+                  "name": "Glencar",
+                  "postal_code": "F92 T2P1",
+                  "townlands": "Glencar",
+                  "electoral_ward": "Letterkenny"
+                },
+                {
+                  "name": "Ballymacool",
+                  "postal_code": "F92 E5H8",
+                  "townlands": "Ballymacool",
+                  "electoral_ward": "Letterkenny"
+                },
+                {
+                  "name": "Old Town",
+                  "postal_code": "F92 V2A3",
+                  "townlands": "Letterkenny Urban",
+                  "electoral_ward": "Letterkenny"
+                },
+                {
+                  "name": "Knocknamona",
+                  "postal_code": "F92 H4K7",
+                  "townlands": "Knocknamona",
+                  "electoral_ward": "Letterkenny"
+                },
+                {
+                  "name": "Lismonaghan",
+                  "postal_code": "F92 P9R6",
+                  "townlands": "Lismonaghan",
+                  "electoral_ward": "Letterkenny"
+                }
+              ]
+            },
+            {
+              "name": "Buncrana",
+              "postal_code": "F93",
+              "electoral_ward": "Buncrana Local Electoral Area",
+              "population": 6971,
+              "average_age": 39.5,
+              "male_population": 3420,
+              "female_population": 3551,
+              "male_children": 775,
+              "female_children": 740,
+              "marital_status_percentages": {
+                "single": 40.8,
+                "married": 45.2,
+                "separated": 3.4,
+                "divorced": 5.8,
+                "widowed": 4.8
+              },
+              "neighbourhood": [
+                {
+                  "name": "Westbrook",
+                  "postal_code": "F93 C4P2",
+                  "townlands": "Westbrook",
+                  "electoral_ward": "Buncrana"
+                },
+                {
+                  "name": "Churchfield",
+                  "postal_code": "F93 R8X1",
+                  "townlands": "Churchfield",
+                  "electoral_ward": "Buncrana"
+                },
+                {
+                  "name": "Upper Buncrana",
+                  "postal_code": "F93 A2N5",
+                  "townlands": "Upper Buncrana",
+                  "electoral_ward": "Buncrana"
+                },
+                {
+                  "name": "Lower Buncrana",
+                  "postal_code": "F93 T7K3",
+                  "townlands": "Lower Buncrana",
+                  "electoral_ward": "Buncrana"
+                },
+                {
+                  "name": "Ludden",
+                  "postal_code": "F93 H9V6",
+                  "townlands": "Ludden",
+                  "electoral_ward": "Buncrana"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Cavan",
+          "population": 81704,
+          "average_age": 38.9,
+          "cities_towns": [
+            {
+              "name": "Cavan",
+              "postal_code": "H12",
+              "electoral_ward": "Cavan-Belturbet Local Electoral Area",
+              "population": 11741,
+              "average_age": 37.8,
+              "male_population": 5750,
+              "female_population": 5991,
+              "male_children": 1250,
+              "female_children": 1200,
+              "marital_status_percentages": {
+                "single": 39.8,
+                "married": 46.1,
+                "separated": 3.2,
+                "divorced": 5.1,
+                "widowed": 5.8
+              },
+              "neighbourhood": [
+                {
+                  "name": "Tullymongan",
+                  "postal_code": "H12 C4R2",
+                  "townlands": "Tullymongan",
+                  "electoral_ward": "Cavan"
+                },
+                {
+                  "name": "Drumgola",
+                  "postal_code": "H12 X8P1",
+                  "townlands": "Drumgola",
+                  "electoral_ward": "Cavan"
+                },
+                {
+                  "name": "Gallows Hill",
+                  "postal_code": "H12 N5A9",
+                  "townlands": "Gallows Hill",
+                  "electoral_ward": "Cavan"
+                },
+                {
+                  "name": "Farnham",
+                  "postal_code": "H12 E7K3",
+                  "townlands": "Farnham",
+                  "electoral_ward": "Cavan"
+                },
+                {
+                  "name": "Cavan Town Centre",
+                  "postal_code": "H12 D2V6",
+                  "townlands": "Cavan Urban",
+                  "electoral_ward": "Cavan"
+                }
+              ]
+            },
+            {
+              "name": "Bailieborough",
+              "postal_code": "A82",
+              "electoral_ward": "Bailieborough–Cootehill Local Electoral Area",
+              "population": 2683,
+              "average_age": 40.2,
+              "male_population": 1320,
+              "female_population": 1363,
+              "male_children": 300,
+              "female_children": 285,
+              "marital_status_percentages": {
+                "single": 36.8,
+                "married": 47.8,
+                "separated": 3.4,
+                "divorced": 5.9,
+                "widowed": 6.1
+              },
+              "neighbourhood": [
+                {
+                  "name": "Main Street Area",
+                  "postal_code": "A82 W4P7",
+                  "townlands": "Bailieborough Town",
+                  "electoral_ward": "Bailieborough"
+                },
+                {
+                  "name": "Castle Lake",
+                  "postal_code": "A82 Y6R2",
+                  "townlands": "Castle Lake",
+                  "electoral_ward": "Bailieborough"
+                },
+                {
+                  "name": "Tanyard",
+                  "postal_code": "A82 F8N1",
+                  "townlands": "Tanyard",
+                  "electoral_ward": "Bailieborough"
+                },
+                {
+                  "name": "Note: Only 3 defined neighbourhoods",
+                  "reason": "Bailieborough is a smaller town with limited distinct neighbourhood areas"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Monaghan",
+          "population": 65444,
+          "average_age": 39.2,
+          "cities_towns": [
+            {
+              "name": "Monaghan",
+              "postal_code": "H18",
+              "electoral_ward": "Monaghan Municipal District",
+              "population": 7678,
+              "average_age": 38.5,
+              "male_population": 3770,
+              "female_population": 3908,
+              "male_children": 850,
+              "female_children": 815,
+              "marital_status_percentages": {
+                "single": 38.9,
+                "married": 46.8,
+                "separated": 3.3,
+                "divorced": 5.4,
+                "widowed": 5.6
+              },
+              "neighbourhood": [
+                {
+                  "name": "Church Square",
+                  "postal_code": "H18 A6Y2",
+                  "townlands": "Monaghan Urban",
+                  "electoral_ward": "Monaghan"
+                },
+                {
+                  "name": "Glaslough Street",
+                  "postal_code": "H18 K4T8",
+                  "townlands": "Glaslough Street",
+                  "electoral_ward": "Monaghan"
+                },
+                {
+                  "name": "Roosky",
+                  "postal_code": "H18 V7H3",
+                  "townlands": "Roosky",
+                  "electoral_ward": "Monaghan"
+                },
+                {
+                  "name": "Coolshannagh",
+                  "postal_code": "H18 P9E1",
+                  "townlands": "Coolshannagh",
+                  "electoral_ward": "Monaghan"
+                },
+                {
+                  "name": "Knockaconny",
+                  "postal_code": "H18 R2C5",
+                  "townlands": "Knockaconny",
+                  "electoral_ward": "Monaghan"
+                }
+              ]
+            },
+            {
+              "name": "Castleblayney",
+              "postal_code": "A75",
+              "electoral_ward": "Carrickmacross–Castleblayney Municipal District",
+              "population": 3607,
+              "average_age": 39.8,
+              "male_population": 1770,
+              "female_population": 1837,
+              "male_children": 400,
+              "female_children": 385,
+              "marital_status_percentages": {
+                "single": 37.2,
+                "married": 47.5,
+                "separated": 3.5,
+                "divorced": 6.1,
+                "widowed": 5.7
+              },
+              "neighbourhood": [
+                {
+                  "name": "Lough Muckno",
+                  "postal_code": "A75 E8R4",
+                  "townlands": "Lough Muckno",
+                  "electoral_ward": "Castleblayney"
+                },
+                {
+                  "name": "York Street",
+                  "postal_code": "A75 T3N7",
+                  "townlands": "York Street",
+                  "electoral_ward": "Castleblayney"
+                },
+                {
+                  "name": "Muckno Street",
+                  "postal_code": "A75 W6K1",
+                  "townlands": "Muckno Street",
+                  "electoral_ward": "Castleblayney"
+                },
+                {
+                  "name": "Note: Only 3 defined neighbourhoods",
+                  "reason": "Castleblayney is a smaller town with limited distinct neighbourhood areas"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

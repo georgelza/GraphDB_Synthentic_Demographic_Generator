@@ -1,0 +1,282 @@
+
+SET 'execution.checkpointing.interval'   = '30s';
+
+SET 'table.exec.sink.upsert-materialize' = 'NONE';
+
+################################################################################################################################################
+
+SET 'pipeline.name' = 'Persist into Paimon: Childrenx table';
+
+CREATE OR REPLACE TABLE c_paimon.outbound.childrenx WITH (
+     'file.format'                       = 'parquet'
+    ,'compaction.min.file-num'           = '2'
+    ,'compaction.early-max.file-num'     = '50'
+    ,'snapshot.time-retained'            = '1h'
+    ,'snapshot.num-retained.min'         = '5'
+    ,'snapshot.num-retained.max'         = '20'
+    ,'table.exec.sink.upsert-materialize'= 'NONE'
+) AS 
+SELECT * FROM kafka_catalog.inbound.children;
+
+################################################################################################################################################
+
+SET 'pipeline.name' = 'Persist into Paimon: Adultsx table';
+
+CREATE OR REPLACE TABLE c_paimon.outbound.adultsx WITH (
+     'file.format'                       = 'parquet'
+    ,'compaction.min.file-num'           = '2'
+    ,'compaction.early-max.file-num'     = '50'
+    ,'snapshot.time-retained'            = '1h'
+    ,'snapshot.num-retained.min'         = '5'
+    ,'snapshot.num-retained.max'         = '20'
+    ,'table.exec.sink.upsert-materialize'= 'NONE'
+) AS 
+SELECT * FROM kafka_catalog.inbound.adults;
+
+################################################################################################################################################
+
+SET 'pipeline.name' = 'Persist into Paimon: Familiesx table';
+
+CREATE OR REPLACE TABLE c_paimon.outbound.familiesx WITH (
+     'file.format'                       = 'parquet'
+    ,'compaction.min.file-num'           = '2'
+    ,'compaction.early-max.file-num'     = '50'
+    ,'snapshot.time-retained'            = '1h'
+    ,'snapshot.num-retained.min'         = '5'
+    ,'snapshot.num-retained.max'         = '20'
+    ,'table.exec.sink.upsert-materialize'= 'NONE'
+) AS 
+SELECT * FROM kafka_catalog.inbound.families;
+
+################################################################################################################################################
+################################################################################################################################################
+
+CREATE OR REPLACE TABLE c_paimon.outbound.address (
+     parcel_id          VARCHAR(20)     NOT NULL
+    ,street_1           VARCHAR(200)
+    ,street_2           VARCHAR(200)
+    ,neighbourhood      VARCHAR(100)
+    ,town               VARCHAR(100)
+    ,county             VARCHAR(100)
+    ,province           VARCHAR(100)
+    ,country            VARCHAR(100)
+    ,postal_code        VARCHAR(20)
+    ,country_code       VARCHAR(5)
+    ,created_at         TIMESTAMP_LTZ(3)
+    ,WATERMARK FOR      created_at AS created_at - INTERVAL '15' SECOND
+    ,PRIMARY KEY (parcel_id) NOT ENFORCED
+) WITH (
+     'file.format'                       = 'parquet'
+    ,'compaction.min.file-num'           = '2'
+    ,'compaction.early-max.file-num'     = '50'
+    ,'snapshot.time-retained'            = '1h'
+    ,'snapshot.num-retained.min'         = '5'
+    ,'snapshot.num-retained.max'         = '20'
+    ,'table.exec.sink.upsert-materialize'= 'NONE'
+);
+
+################################################################################################################################################
+
+CREATE OR REPLACE TABLE c_paimon.outbound.accounts (
+     nationalid             VARCHAR(14)     NOT NULL
+     -- Standard Account fields
+    ,fspiagentaccountid     VARCHAR(100)
+    ,accountid              VARCHAR(50)
+    ,fspiid                 VARCHAR(20)
+    ,fspiagentid            VARCHAR(20)
+    ,accounttype            VARCHAR(200)
+    ,membername             VARCHAR(200)
+    -- Card specific fields
+    ,cardholder             VARCHAR(200)
+    ,cardnumber             VARCHAR(20)
+    ,expdate                VARCHAR(10)
+    ,cardnetwork            VARCHAR(50)
+    ,issuingbank            VARCHAR(200)
+    -- Generic Bits
+    -- ,created_at             TIMESTAMP_LTZ(3)
+    -- ,WATERMARK FOR created_at AS created_at - INTERVAL '15' SECOND
+) WITH (
+     'file.format'                       = 'parquet'
+    ,'compaction.min.file-num'           = '2'
+    ,'compaction.early-max.file-num'     = '50'
+    ,'snapshot.time-retained'            = '1h'
+    ,'snapshot.num-retained.min'         = '5'
+    ,'snapshot.num-retained.max'         = '20'
+    ,'table.exec.sink.upsert-materialize'= 'NONE'
+);
+
+################################################################################################################################################
+################################################################################################################################################
+
+CREATE OR REPLACE TABLE c_paimon.outbound.children (
+     _id                VARCHAR(32)                              -- UUID generated by app, inside 'data' / json payload
+    ,name               VARCHAR(20)
+    ,surname            VARCHAR(20)
+    ,gender             VARCHAR(10)
+    ,dob                VARCHAR(10)
+    ,nationalid         VARCHAR(20)
+    ,family_id          VARCHAR(32)
+    ,father_nationalid  VARCHAR(20)
+    ,mother_nationalid  VARCHAR(20)
+    ,address            ROW<
+         parcel_id          VARCHAR(20)
+        ,street_1           VARCHAR(200)
+        ,street_2           VARCHAR(200)
+        ,neighbourhood      VARCHAR(100)
+        ,town               VARCHAR(100)
+        ,county             VARCHAR(100)
+        ,province           VARCHAR(100)
+        ,country            VARCHAR(100)
+        ,postal_code        VARCHAR(20)
+        ,country_code       VARCHAR(5)
+    >
+    ,created_at         TIMESTAMP_LTZ(3) 
+    ,WATERMARK FOR created_at AS created_at - INTERVAL '15' SECOND
+    ,PRIMARY KEY (nationalid) NOT ENFORCED
+) WITH (
+     'file.format'                       = 'parquet'
+    ,'compaction.min.file-num'           = '2'
+    ,'compaction.early-max.file-num'     = '50'
+    ,'snapshot.time-retained'            = '1h'
+    ,'snapshot.num-retained.min'         = '5'
+    ,'snapshot.num-retained.max'         = '20'
+    ,'table.exec.sink.upsert-materialize'= 'NONE'
+);
+
+################################################################################################################################################
+
+CREATE TABLE c_paimon.outbound.adults (
+     nationalid         VARCHAR(14)     NOT NULL
+    ,_id                VARCHAR(32)             -- UUID generated by app, inside 'data' / json payload
+    ,name               VARCHAR(100)
+    ,surname            VARCHAR(100)
+    ,dob                VARCHAR(10)             -- Keeping as VARCHAR to match input format
+    ,gender             VARCHAR(1)
+    ,status             VARCHAR(20)
+    ,marital_status     VARCHAR(20)
+    ,address            ROW<
+         parcel_id          VARCHAR(20)
+        ,street_1           VARCHAR(200)
+        ,street_2           VARCHAR(200)
+        ,neighbourhood      VARCHAR(100)
+        ,town               VARCHAR(100)
+        ,county             VARCHAR(100)
+        ,province           VARCHAR(100)
+        ,country            VARCHAR(100)
+        ,postal_code        VARCHAR(20)
+        ,country_code       VARCHAR(5)
+    >
+    ,account            ARRAY<ROW<
+         fspiAgentAccountId  VARCHAR(20)
+        ,accountId           VARCHAR(20)
+        ,fspiId              VARCHAR(20)
+        ,memberName          VARCHAR(100)
+        ,accountType         VARCHAR(20)
+        ,fspiAgentId         VARCHAR(20)
+        ,expDate             VARCHAR(6)
+        ,cardHolder          VARCHAR(20)
+        ,cardNumber          VARCHAR(20)
+        ,cardNetwork         VARCHAR(20)
+        ,issuingBank         VARCHAR(100)
+    >>
+    ,created_at         TIMESTAMP_LTZ(3)
+    ,WATERMARK FOR created_at AS created_at - INTERVAL '15' SECOND
+    ,PRIMARY KEY (nationalid) NOT ENFORCED
+) WITH (
+     'file.format'                       = 'parquet'
+    ,'compaction.min.file-num'           = '2'
+    ,'compaction.early-max.file-num'     = '50'
+    ,'snapshot.time-retained'            = '1h'
+    ,'snapshot.num-retained.min'         = '5'
+    ,'snapshot.num-retained.max'         = '20'
+    ,'table.exec.sink.upsert-materialize'= 'NONE'
+);
+
+################################################################################################################################################
+
+CREATE OR REPLACE TABLE c_paimon.outbound.families (
+     id                 BIGINT                          -- Postgres Serial value
+    ,_id                VARCHAR(32)                     -- UUID, valaue is contained inside the data colume from source
+    ,husband            ROW<
+         name                   VARCHAR(100)
+        ,surname                VARCHAR(100)
+        ,nationalid             VARCHAR(14)
+        ,gender                 VARCHAR(1)
+        ,dob                    VARCHAR(10)
+        ,marital_status         VARCHAR(20)
+        ,partner                VARCHAR(14)             -- nationalid if of partner/wife
+        ,status                 VARCHAR(20)
+        ,account        ARRAY<ROW<
+             fspiAgentAccountId VARCHAR(20)
+            ,accountId          VARCHAR(20)
+            ,fspiId             VARCHAR(20)
+            ,memberName         VARCHAR(100)
+            ,accountType        VARCHAR(20)
+            ,fspiAgentId        VARCHAR(20)
+            ,expDate            VARCHAR(6)
+            ,cardHolder         VARCHAR(20)
+            ,cardNumber         VARCHAR(20)
+            ,cardNetwork        VARCHAR(20)
+            ,issuingBank        VARCHAR(100)
+        >>
+    >
+    ,wife               ROW<
+         name                   VARCHAR(100)
+        ,surname                VARCHAR(100)
+        ,nationalid             VARCHAR(14)
+        ,gender                 VARCHAR(1)
+        ,dob                    VARCHAR(10)
+        ,marital_status         VARCHAR(20)
+        ,partner                VARCHAR(14)             -- nationalid if of partner/husband
+        ,status                 VARCHAR(20)
+        ,account        ARRAY<ROW<
+             fspiAgentAccountId  VARCHAR(20)
+            ,accountId           VARCHAR(20)
+            ,fspiId              VARCHAR(20)
+            ,memberName          VARCHAR(100)
+            ,accountType         VARCHAR(20)
+            ,fspiAgentId         VARCHAR(20)
+            ,expDate             VARCHAR(6)
+            ,cardHolder          VARCHAR(20)
+            ,cardNumber          VARCHAR(20)
+            ,cardNetwork         VARCHAR(20)
+            ,issuingBank         VARCHAR(100)
+        >>
+    >
+    ,address            ROW <
+         parcel_id              VARCHAR(20)
+        ,street_1               VARCHAR(200)
+        ,street_2               VARCHAR(200)
+        ,neighbourhood          VARCHAR(100)
+        ,town                   VARCHAR(100)
+        ,county                 VARCHAR(100)
+        ,province               VARCHAR(100)
+        ,country                VARCHAR(100)
+        ,postal_code            VARCHAR(20)
+        ,country_code           VARCHAR(5)
+    >
+    ,children           ARRAY<ROW<
+         name                   VARCHAR(100)
+        ,surname                VARCHAR(100)
+        ,gender                 VARCHAR(1)
+        ,dob                    VARCHAR(10)
+        ,nationalid             VARCHAR(14)
+        ,father_nationalid      VARCHAR(14)             -- nationalid if of father
+        ,mother_nationalid      VARCHAR(14)             -- nationalid if of father
+    >>
+) WITH (
+     'file.format'                       = 'parquet'
+    ,'compaction.min.file-num'           = '2'
+    ,'compaction.early-max.file-num'     = '50'
+    ,'snapshot.time-retained'            = '1h'
+    ,'snapshot.num-retained.min'         = '5'
+    ,'snapshot.num-retained.max'         = '20'
+    ,'table.exec.sink.upsert-materialize'= 'NONE'
+);
+
+################################################################################################################################################
+
+
+
+
+
