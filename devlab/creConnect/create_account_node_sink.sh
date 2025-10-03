@@ -16,5 +16,5 @@ echo ""
 echo "Checking connector status..."
 echo "=========================="
 
-echo "AccountEvents sink status:"
+echo "Accounts sink status:"
 curl -s http://localhost:8083/connectors/neo4j-accounts-node-sink/status | jq '.'

@@ -17,12 +17,8 @@ These require the json payloads be posted onto the kafka topic, which will resul
 - Recode all adults and children as people and then add secondary label of adults or children to people.
 
 - Add parcel_id as a property to address node.
-
-- Create Family node, family_id
    
-- Create edge between family members/people and the family node.
-
-- Create edge between family members => Address node based on same parcel_id 
+- Create edge [LIVING_AT (:parcel_id)] between family members => Address node based on same parcel_id 
 
 - Create edge between Address and the neighbourhood node based on neighbourhood.
 
