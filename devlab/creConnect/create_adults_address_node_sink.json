@@ -1,0 +1,20 @@
+{
+  "name": "neo4j-adults-address-node-sink",
+  "config": {
+    "connector.class": "org.neo4j.connectors.kafka.sink.Neo4jConnector",
+    "topics": "adults",
+    "neo4j.uri": "bolt://neo4j:7687",
+    "neo4j.authentication.basic.username": "neo4j",
+    "neo4j.authentication.basic.password": "dbpassword",
+    "neo4j.cypher.topic.adults": "MERGE (t:Address {parcel_id: event.address.parcel_id}) ON CREATE SET t += {parcel_id: event.address.parcel_id, street_1: event.address.street_1, street_2: event.address.street_2, town: event.address.town, county: event.address.county, province: event.address.province, country: event.address.country, postal_code: event.address.postal_code, country_code: event.address.country_code, neighbourhood: event.address.neighbourhood} ON MATCH SET t += { street_1: event.address.street_1, street_2: event.address.street_2, town: event.address.town, county: event.address.county, province: event.address.province, country: event.address.country, postal_code: event.address.postal_code, country_code: event.address.country_code, neighbourhood: event.address.neighbourhood}",
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter.schemas.enable": "false",
+    "tasks.max": "2",
+    "neo4j.batch.size": "1000",
+    "neo4j.batch.timeout.msecs": "5000",
+    "neo4j.retry.backoff.msecs": "3000",
+    "neo4j.retry.max.attemps": "5"
+  }
+}
+
