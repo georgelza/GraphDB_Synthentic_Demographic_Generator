@@ -5,6 +5,7 @@
 # 3. Children Nodes Sink
 # =============================================================================
 echo "Creating 'Children' nodes sink..."
+export NEO4J_CYPHER=$(cat create_children_address_node_merge.json)
 curl -X POST http://localhost:8083/connectors \
   -H "Content-Type: application/json" \
   -d @create_children_address_node_sink.json

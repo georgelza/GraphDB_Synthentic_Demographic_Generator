@@ -6,7 +6,7 @@
     "neo4j.uri": "bolt://neo4j:7687",
     "neo4j.authentication.basic.username": "neo4j",
     "neo4j.authentication.basic.password": "dbpassword",
-    "neo4j.cypher.topic.adults": "MERGE (t:Adults {nationalid: event.nationalid}) ON CREATE SET t += {nationalid: event.nationalid, _id: event._id, name: event.name, surname: event.surname, gender: event.gender, dob: event.dob, marital_status: event.marital_status, partner: event.partner, status: event.status, parcel_id: event.address.parcel_id}",
+    "neo4j.cypher.topic.adults": "${envVarProvider:NEO4J_CYPHER}",
     "key.converter": "org.apache.kafka.connect.storage.StringConverter",
     "value.converter": "org.apache.kafka.connect.json.JsonConverter",
     "value.converter.schemas.enable": "false",

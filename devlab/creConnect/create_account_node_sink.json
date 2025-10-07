@@ -6,7 +6,7 @@
     "neo4j.uri": "bolt://neo4j:7687",
     "neo4j.authentication.basic.username": "neo4j",
     "neo4j.authentication.basic.password": "dbpassword",
-    "neo4j.cypher.topic.adults": "MERGE (t:Accounts {fspiAgentAccountId: event.fspiAgentAccountId}) ON CREATE SET t += {fspiAgentAccountId: event.fspiAgentAccountId, accountId: event.accountId, fspiId: event.fspiId, fspiAgentId: event.fspiAgentId, accountType: event.accountType, memberName: event.memberName} ON MATCH SET t += {fspiAgentAccountId: event.fspiAgentAccountId, accountId: event.accountId, fspiId: event.fspiId, fspiAgentId: event.fspiAgentId, accountType: event.accountType, memberName: event.memberName}",
+    "neo4j.cypher.topic.adults": "${envVarProvider:NEO4J_CYPHER}",
     "key.converter": "org.apache.kafka.connect.storage.StringConverter",
     "value.converter": "org.apache.kafka.connect.json.JsonConverter",
     "value.converter.schemas.enable": "false",

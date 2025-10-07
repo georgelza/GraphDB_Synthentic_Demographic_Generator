@@ -6,6 +6,7 @@
 # 2. Adults Nodes Sink
 # =============================================================================
 echo "Creating 'Adults' nodes sink..."
+export NEO4J_CYPHER=$(cat create_adults_node_merge.json)
 curl -X POST http://localhost:8083/connectors \
   -H "Content-Type: application/json" \
   -d @create_adults_node_sink.json
