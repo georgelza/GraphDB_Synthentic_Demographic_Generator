@@ -1,5 +1,5 @@
 {
-  "name": "neo4j-accounts-node-sink",
+  "name": "neo4j-account-node-sink",
   "config": {
     "connector.class": "org.neo4j.connectors.kafka.sink.Neo4jConnector",
     "topics": "adults",

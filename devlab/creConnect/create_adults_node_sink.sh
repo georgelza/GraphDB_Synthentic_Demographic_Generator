@@ -3,7 +3,7 @@
 # Neo4j Kafka Connect Sink Configurations.
 
 # =============================================================================
-# 2. Adults Nodes Sink
+# Adults Nodes Sink
 # =============================================================================
 echo "Creating 'Adults' nodes sink..."
 export NEO4J_CYPHER=$(cat create_adults_node_sink.cypher)

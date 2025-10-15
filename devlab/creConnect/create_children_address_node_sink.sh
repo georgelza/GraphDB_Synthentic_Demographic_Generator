@@ -1,10 +1,11 @@
 #!/bin/bash
 
 # Neo4j Kafka Connect Sink Configurations.
+
 # =============================================================================
-# 3. Children Nodes Sink
+# Children Address Nodes Sink
 # =============================================================================
-echo "Creating 'Children' nodes sink..."
+echo "Creating 'Children' Address nodes sink..."
 export NEO4J_CYPHER=$(cat create_children_address_node_sink.cypher)
 curl -X POST http://localhost:8083/connectors \
   -H "Content-Type: application/json" \
