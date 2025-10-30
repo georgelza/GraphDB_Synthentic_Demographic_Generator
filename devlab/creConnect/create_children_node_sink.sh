@@ -1,15 +1,42 @@
 #!/bin/bash
 
-# Neo4j Kafka Connect Sink Configurations.
+# Neo4j Kafka Connect Sink Configurations - Children Nodes
 
 # =============================================================================
 # Children Nodes Sink
 # =============================================================================
 echo "Creating 'Children' nodes sink..."
-export NEO4J_CYPHER=$(cat create_children_node_sink.cypher)
-curl -X POST http://localhost:8083/connectors \
+
+# Read the Cypher query
+CYPHER_QUERY=$(cat create_children_node_sink.cypher)
+
+# Create JSON payload with Cypher embedded
+JSON_PAYLOAD=$(jq -n \
+  --arg cypher "$CYPHER_QUERY" \
+  '{
+    "name": "neo4j-children-node-sink",
+    "config": {
+      "connector.class": "org.neo4j.connectors.kafka.sink.Neo4jConnector",
+      "topics": "children",
+      "neo4j.uri": "bolt://neo4j:7687",
+      "neo4j.authentication.basic.username": "neo4j",
+      "neo4j.authentication.basic.password": "dbpassword",
+      "neo4j.cypher.topic.children": $cypher,
+      "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+      "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+      "value.converter.schemas.enable": "false",
+      "tasks.max": "2",
+      "neo4j.batch.size": "1000",
+      "neo4j.batch.timeout.msecs": "5000",
+      "neo4j.retry.backoff.msecs": "3000",
+      "neo4j.retry.max.attemps": "5"
+    }
+  }')
+
+# Send to Kafka Connect
+echo "$JSON_PAYLOAD" | curl -X POST http://localhost:8083/connectors \
   -H "Content-Type: application/json" \
-  -d @create_children_node_sink.json
+  -d @-
 
 # =============================================================================
 # STATUS CHECK COMMANDS
