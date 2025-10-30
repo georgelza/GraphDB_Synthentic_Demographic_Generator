@@ -19,7 +19,12 @@
 .DS_Store
 .idea/
 .vscode/
-app/__pychache__/*
+
+# Python
+*.pyc
+*.pyo
+*.py[cod]
+__pycache__/
 
 #.pws
 
