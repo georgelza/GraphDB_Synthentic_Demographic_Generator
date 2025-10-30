@@ -1,6 +1,7 @@
 WITH event as data
 UNWIND data.account AS account
-MERGE (acc:Account {fspiAgentAccountId: account.fspiAgentAccountId})
+WITH data, account WHERE account.accountId IS NOT NULL
+MERGE (acc:Account {accountId: account.accountId, fspiId: account.fspiId})
 ON CREATE SET acc += {
   nationalid:   data.nationalid,
   accountId:    account.accountId,

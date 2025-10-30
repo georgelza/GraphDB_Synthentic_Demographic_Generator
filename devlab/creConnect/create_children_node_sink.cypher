@@ -24,3 +24,4 @@ ON MATCH SET t += {
   parcel_id:          event.address.parcel_id,
   updatedAt:          timestamp()
 }
+
