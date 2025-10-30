@@ -35,3 +35,4 @@ devlab/flink/stage/
 devlab/data/
 infrastructure/build-hive-openjdk8/base/stage/
 infrastructure/build-hive-openjdk8/basehive/stage/
+misc/
