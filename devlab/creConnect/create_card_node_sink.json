@@ -1,12 +1,12 @@
 {
-  "name": "neo4j-children-node-sink",
+  "name": "neo4j-card-node-sink",
   "config": {
     "connector.class": "org.neo4j.connectors.kafka.sink.Neo4jConnector",
-    "topics": "children",
+    "topics": "adults",
     "neo4j.uri": "bolt://neo4j:7687",
     "neo4j.authentication.basic.username": "neo4j",
     "neo4j.authentication.basic.password": "dbpassword",
-    "neo4j.cypher.topic.children": "${envVarProvider:NEO4J_CYPHER}",
+    "neo4j.cypher.topic.adults": "${envVarProvider:NEO4J_CYPHER}",
     "key.converter": "org.apache.kafka.connect.storage.StringConverter",
     "value.converter": "org.apache.kafka.connect.json.JsonConverter",
     "value.converter.schemas.enable": "false",

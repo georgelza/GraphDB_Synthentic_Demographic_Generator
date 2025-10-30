@@ -24,5 +24,3 @@ ON MATCH SET t += {
   neighbourhood:  event.address.neighbourhood,
   updatedAt:      timestamp()
 }
-
-

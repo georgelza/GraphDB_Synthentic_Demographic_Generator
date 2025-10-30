@@ -9,11 +9,6 @@ ON CREATE SET acc += {
   fspiAgentId:  account.fspiAgentId,
   accountType:  account.accountType,
   memberName:   account.memberName,
-  cardHolder:   account.cardHolder,
-  cardNumber:   account.cardNumber,
-  expDate:      account.expDate,
-  cardNetwork:  account.cardNetwork,  
-  issuingBank:  account.issuingBank,
   createdAt:    timestamp()
 }
 ON MATCH SET acc += {
@@ -22,10 +17,5 @@ ON MATCH SET acc += {
   fspiAgentId:  account.fspiAgentId,
   accountType:  account.accountType,
   memberName:   account.memberName,
-  cardHolder:   account.cardHolder,
-  cardNumber:   account.cardNumber,
-  expDate:      account.expDate,
-  cardNetwork:  account.cardNetwork,
-  issuingBank:  account.issuingBank,
   updatedAt:    timestamp()
 }
