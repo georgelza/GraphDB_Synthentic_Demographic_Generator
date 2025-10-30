@@ -1,9 +1,8 @@
 .DEFAULT_GOAL := help
--include ../../devlab/.env
+include ../.env
 
 IMAGE_NAME=kafka-connect-custom
 VERSION=2.1
-REPO_NAME?=georgelza
 
 define HELP
 
