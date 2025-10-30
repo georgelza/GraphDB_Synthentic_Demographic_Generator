@@ -235,7 +235,7 @@ services:
   # Will act as a destination database for our app data created 
   # and additionally store our paimon catalog via the jdbc connection. 
   postgrescat:
-    image: ${REPO_NAME}/postgres-12.0:1.0.0
+    image: postgres:12
     container_name: ${POSTGRES_CAT_HOST}
     hostname: ${POSTGRES_CAT_HOST}
     restart: unless-stopped
@@ -259,7 +259,7 @@ services:
 
 
   postgrescdc:
-    image: ${REPO_NAME}/postgres-12.0:1.0.0
+    image: postgres:12
     container_name: ${POSTGRES_CDC_HOST}
     hostname: ${POSTGRES_CDC_HOST}
     restart: unless-stopped

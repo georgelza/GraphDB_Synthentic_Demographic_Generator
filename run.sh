@@ -87,8 +87,14 @@ export KAFKA_SECURITY_PROTOCOL=PLAINTEXT                    # PLAINTEXT or SSL o
 export KAFKA_SASL_MECHANISMS=PLAIN                          # PLAIN or SCRAM-SHA-256 or SCRAM-SHA-512
 export KAFKA_SASL_USERNAME=
 # export KAFKA_SASL_PASSWORD=
-export KAFKA_MAXRETRIES=4                                   
+export KAFKA_MAXRETRIES=4
 export KAFKA_DELAY=0.25                                     # delay seconds, which doubled ever retry
 
 
-python3 app/main.py
+# Activate virtual environment if it exists
+if [ -d "venv" ]; then
+    source venv/bin/activate
+    python app/main.py
+else
+    python3 app/main.py
+fi
