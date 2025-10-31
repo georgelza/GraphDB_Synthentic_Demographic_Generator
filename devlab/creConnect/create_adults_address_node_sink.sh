@@ -8,7 +8,7 @@
 echo "Creating 'Adults Address' nodes sink..."
 
 # Read the Cypher query
-CYPHER_QUERY=$(cat create_adults_address_node_sink.cypher)
+CYPHER_QUERY=$(cat create_address_node_sink.cypher)
 
 # Create JSON payload with Cypher embedded
 JSON_PAYLOAD=$(jq -n \
