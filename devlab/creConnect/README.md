@@ -4,6 +4,8 @@ Simple, all our sink and eventually source jobs will be defined here.
 
 These require the json payloads be posted onto the kafka topic, which will result as a sink into Neo4J.
 
+NOTE: see some lessons learned in the v1 directory as commented on at the bottom.
+
 ### Primary Topics -> Nodes
 
 - create_account_node_sink -> This sinks/create Account nodes, extracting the Account detail from the adults topic/Account tag. 
@@ -19,21 +21,38 @@ These require the json payloads be posted onto the kafka topic, which will resul
 - create_children_address_node_sink -> additionally we will extract the address tag and create Address Nodes
 
 
+## Deploy
+
+You can deploy all the node creates by either individually executing the shell scripts or execution:  
+
+```shell
+./deploy.sh
+```
+
+
+### Tricks...
+
+Easy way to execute all the shell scripts in the local directory
+
+```shell
+find ./ -maxdepth 1 -name '*.sh' -exec {} \;
+```
+
+
 ### TODO
 
 - Create Edge's
-  - Create edge [LIVING_AT (:parcel_id)] between family members => Address node based on same parcel_id 
+  - Create edge [LIVES_AT (:parcel_id)] between family members => Address node based on same parcel_id 
 
   - Create edge between Address and the neighbourhood node based on neighbourhood.
 
   - Accounts ... 
-    - create edge between people/adults and accounts nodes.
-    - create edge between accounts and banks nodes.
+    - create edge between people/adults and accounts nodes. [HAVE_ACCOUNT]
+    - create edge between accounts and banks (memberName, fspiId) nodes.
 
   - Credit Card ... 
-    - create edge between people/adults and credit card nodes.
-    - create edge between CC and banks nodes.
-
+    - create edge between people/adults and credit card nodes. [HAVE_CARD]
+    - create edge between CC and banks (issuingBank) nodes.
 
 
 ## Version 2

@@ -3,7 +3,7 @@ UNWIND data.account AS card
 WITH data, card WHERE card.cardNumber IS NOT NULL
 MERGE (acc:Card {cardNumber: card.cardNumber})
 ON CREATE SET acc += {
-  nationalid:   data.nationalid,
+  nationalId:   data.nationalid,
   cardHolder:   card.cardHolder,
   cardNumber:   card.cardNumber,
   expDate:      card.expDate,

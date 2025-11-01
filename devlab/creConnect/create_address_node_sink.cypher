@@ -1,5 +1,5 @@
-MERGE (add:Address {parcel_id: event.address.parcel_id}) 
-ON CREATE SET add += {
+MERGE (addr:Address {parcel_id: event.address.parcel_id}) 
+ON CREATE SET addr += {
   parcel_id:      event.address.parcel_id, 
   street_1:       event.address.street_1, 
   street_2:       event.address.street_2, 
@@ -12,7 +12,7 @@ ON CREATE SET add += {
   neighbourhood:  event.address.neighbourhood,
   createdAt:      timestamp()
 } 
-ON MATCH SET add += {
+ON MATCH SET addr += {
   street_1:       event.address.street_1, 
   street_2:       event.address.street_2, 
   town:           event.address.town, 

@@ -1,6 +1,6 @@
-MERGE (t:Adults {nationalid: event.nationalid}) 
-ON CREATE SET t += {
-  nationalid:     event.nationalid, 
+MERGE (adlt:Adults {nationalId: event.nationalid}) 
+ON CREATE SET adlt += {
+  nationalId:     event.nationalid, 
   _id:            event._id, 
   name:           event.name, 
   surname:        event.surname, 
@@ -13,7 +13,7 @@ ON CREATE SET t += {
   parcel_id:      event.address.parcel_id,
   createdAt:      timestamp()
 }
-ON MATCH SET t += { 
+ON MATCH SET adlt += { 
   _id:            event._id, 
   name:           event.name, 
   surname:        event.surname, 

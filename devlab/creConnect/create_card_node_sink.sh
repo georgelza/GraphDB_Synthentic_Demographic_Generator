@@ -1,9 +1,7 @@
 #!/bin/bash
 
-# Neo4j Kafka Connect Sink Configurations - Account Nodes
-
 # =============================================================================
-# Account Nodes Sink
+# Credit Card Nodes Sink
 # =============================================================================
 echo "Creating 'Credit Card' nodes sink..."
 

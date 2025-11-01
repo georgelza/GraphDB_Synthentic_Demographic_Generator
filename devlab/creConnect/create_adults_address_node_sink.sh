@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# Neo4j Kafka Connect Sink Configurations - Adults Address Nodes
-
 # =============================================================================
 # Adults Address Nodes Sink
 # =============================================================================

@@ -3,7 +3,7 @@ UNWIND data.account AS account
 WITH data, account WHERE account.accountId IS NOT NULL
 MERGE (acc:Account {accountId: account.accountId, fspiId: account.fspiId})
 ON CREATE SET acc += {
-  nationalid:   data.nationalid,
+  nationalId:   data.nationalid,
   accountId:    account.accountId,
   fspiId:       account.fspiId,
   fspiAgentId:  account.fspiAgentId,
