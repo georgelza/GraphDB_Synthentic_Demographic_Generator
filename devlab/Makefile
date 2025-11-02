@@ -58,9 +58,9 @@ creNodes:
 	cd creConnect; ./deploy.sh
 
 creEdges:
-	docker compose exec --interactive --tty neo4j cypher-shell -u ${NEO4J_USERNAME} -p ${NEO4J_PASSWORD} -f /cypher/1.create_LivesAt_edge_trigger.cypher
-#	docker compose exec --interactive --tty neo4j cypher-shell -u ${NEO4J_USERNAME} -p ${NEO4J_PASSWORD} -f /cypher/2.create_HaveAccount_edge.cypher
-#	docker compose exec --interactive --tty neo4j cypher-shell -u ${NEO4J_USERNAME} -p ${NEO4J_PASSWORD} -f /cypher/3.create_Card_edge.cypher
+	docker compose exec --interactive --tty neo4j cypher-shell -u ${NEO4J_USERNAME} -p ${NEO4J_PASSWORD} -f /cypher/create_LivesAt_edge_trigger.cypher
+#	docker compose exec --interactive --tty neo4j cypher-shell -u ${NEO4J_USERNAME} -p ${NEO4J_PASSWORD} -f /cypher/create_HaveAccount_edge.cypher
+#	docker compose exec --interactive --tty neo4j cypher-shell -u ${NEO4J_USERNAME} -p ${NEO4J_PASSWORD} -f /cypher/create_Card_edge.cypher
 
 
 constraints:
