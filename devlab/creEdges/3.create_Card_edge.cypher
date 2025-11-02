@@ -33,15 +33,13 @@ CALL apoc.trigger.install(
 MATCH (adlt:Adults)
 MATCH (cc:Card)
 WHERE cc.cardNumber IS NOT NULL and adlt.nationalId = cc.nationalId
-MERGE (adlt)-[r:HAVE_CARD]->(cc)
-ON CREATE SET r.nationalId = cc.nationalId, r.cardNumber = cc.cardNumber, r.cardNetwork = cc.cardNetwork;
+MERGE (adlt)-[r:HAVE_CARD {nationalId: cc.nationalId, cardNumber: cc.cardNumber, cardNetwork: cc.cardNetwork}]->(cc);
 
 
-:use system;
+//:use system;
 // CALL apoc.trigger.show('neo4j');
 // CALL apoc.trigger.drop('neo4j', 'triggerName');
 
-:use neo4j;
+//:use neo4j;
 // TO remove all HAVE_CARD edges
 // MATCH p=()-[r:HAVE_CARD]->() DETACH DELETE r;
-

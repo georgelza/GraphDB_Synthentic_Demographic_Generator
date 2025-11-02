@@ -5,11 +5,11 @@ Graph based visualising of Synthentic_Demographic_Generator generated data toget
 
 So ye, this did not start with this, it was more a lets create a couple of people for the local Locale thats more like real people, families (well it was idea out of my **Neo4J** / **GraphDB** blog).
 
-Ok, In part 1 we created our basic GraphDB model with synthentic data of banks, accounts, corporates, people and their associated information like addresses, mobile devices, land line numbers etc.
+Ok, In **part 1** we created our basic GraphDB model with synthentic data of banks, accounts, corporates, people and their associated information like addresses, mobile devices, land line numbers etc.
 
-In part 2 we added temporal (aka being able to se how a node changed over time, storing versions, referencing the previous version).
+In **part 2** we added temporal (aka being able to se how a node changed over time, storing versions, referencing the previous version).
 
-This is part 3. So what are we doing here. Well, I'm not sure, a couple of things. 
+This is **part 3**. So what are we doing here. Well, I'm not sure, a couple of things. 
 
 #1 we previously created a app that creates a synthetic demographic dataset (see Blog). We for that blog posted all data into a single target data store. Firstly I've modified this version so that each of our data products can go into it's own data store.
 

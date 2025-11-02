@@ -39,43 +39,32 @@ build-images:
 	@echo "✅ Images built successfully"
 .PHONY: build-images
 
-build-images-full:
-	@echo "🔨 Building Kafka Connect image..."
-	@cd ../infrastructure/connect && make build
-	@echo "🔨 Building Flink image (1.20.2)..."
-	@cd flink && make pull1202 && make build1202
-	@echo "✅ All images built successfully"
-.PHONY: build-images-full
 
 run: build-images
-	@echo "🚀 Starting core services (Kafka, Neo4j, MongoDB, PostgreSQL, Redis)..."
+	@echo "🚀 Starting core services (Kafka, Neo4j )..."
 	docker compose -f docker-compose.yml -p graph up -d \
 		broker schema-registry control-center connect \
-		neo4j mongodb postgrescdc redis  \
+		neo4j  \
 		--remove-orphans
 
-run-full: build-images-full
-	@echo "🚀 Starting all services (including Flink, Minio)..."
-	docker compose -f docker-compose.yml -p graph up -d \
-		broker schema-registry control-center connect \
-		jobmanager taskmanager \
-		postgrescat minio minio-client \
-		neo4j mongodb postgrescdc redis  \
-		--remove-orphans 
-
-
- # https://neo4j.com/docs/operations-manual/current/docker/operations/#docker-neo4j-plugins
+# https://neo4j.com/docs/operations-manual/current/docker/operations/#docker-neo4j-plugins
 	
-createtopics:
-	./creTopics/creTopics.sh
-
 
 cypher:
 	docker compose exec --interactive --tty neo4j cypher-shell -u ${NEO4J_USERNAME} -p ${NEO4J_PASSWORD}
 
-constraints:
-	docker compose exec --interactive --tty neo4j cypher-shell -u ${NEO4J_USERNAME} -p ${NEO4J_PASSWORD} -f /connect/constraints.cypher
 
+creNodes:
+	cd creConnect; ./deploy.sh
+
+creEdges:
+	docker compose exec --interactive --tty neo4j cypher-shell -u ${NEO4J_USERNAME} -p ${NEO4J_PASSWORD} -f /cypher/1.create_LivesAt_edge_trigger.cypher
+#	docker compose exec --interactive --tty neo4j cypher-shell -u ${NEO4J_USERNAME} -p ${NEO4J_PASSWORD} -f /cypher/2.create_HaveAccount_edge.cypher
+#	docker compose exec --interactive --tty neo4j cypher-shell -u ${NEO4J_USERNAME} -p ${NEO4J_PASSWORD} -f /cypher/3.create_Card_edge.cypher
+
+
+constraints:
+	docker compose exec --interactive --tty neo4j cypher-shell -u ${NEO4J_USERNAME} -p ${NEO4J_PASSWORD} -f /cypher/constraints.cypher
 
 stop:
 	docker compose stop
@@ -87,13 +76,7 @@ down:
 	docker compose down 
 	cd data/; rm -rf neo4j_db
 	cd data/; rm -rf confluent.d
-	cd data/; rm -rf postgrescdc
-	cd data/; rm -rf postgrescat
-	cd data/; rm -rf redis
-	cd data/; rm -rf flink
-	cd data/; rm -rf minio
-	cd data/; rm -rf mongodb
-
+	cd data/; rm -rf neo4j_data
 
 ps:
 	docker compose ps
@@ -106,9 +89,3 @@ logsf:
 
 watch:
 	watch docker compose ps
-
-fsql:
-	docker compose exec --interactive --tty jobmanager /opt/flink/bin/sql-client.sh
-
-jm:
-	docker compose exec --interactive --tty jobmanager /bin/bash

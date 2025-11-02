@@ -2,6 +2,8 @@
 
 Below is a summary of our seed records in our ireland.json seed file.
 
+This data is either used by our Python application to drive the data generation when selecting where our adults/children stay and with whom the adults have accounts or it can be manually loaded by executing the load_*.cypher scripts in the `cypher-shell`.
+
 I've based this on the Irish Census dataset from the 2022 for all 26 Counties
 
 - This is modelled out in ireland.json

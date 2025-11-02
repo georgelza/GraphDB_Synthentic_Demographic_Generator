@@ -69,11 +69,11 @@ WHERE adlt.parcel_id = addr.parcel_id
 MERGE (adlt)-[r:LIVES_AT {parcel_id: addr.parcel_id}]->(addr);
 
 
-:use system;
+//:use system;
 // CALL apoc.trigger.show('neo4j');
 // CALL apoc.trigger.drop('neo4j', 'triggerName');
 
-:use neo4j;
+//:use neo4j;
 // TO remove all LIVES_AT edges
 // MATCH p=()-[r:LIVES_AT]->() DETACH DELETE r;
 

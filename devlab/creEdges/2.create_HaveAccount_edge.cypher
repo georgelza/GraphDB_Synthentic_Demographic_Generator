@@ -30,17 +30,17 @@ CALL apoc.trigger.install(
 
 // notice the ON CREATE SET
 :use neo4j;
+
 MATCH (adlt:Adults)
 MATCH (acc:Account)
 WHERE acc.accountId IS NOT NULL and adlt.nationalId = acc.nationalId
-MERGE (adlt)-[r:HAVE_ACCOUNT]->(acc)
-ON CREATE SET r.nationalId = acc.nationalId, r.accountId = acc.accountId, r.memberName = acc.memberName;
+MERGE (adlt)-[r:HAVE_ACCOUNT]->(acc);
 
 
-:use system;
+//:use system;
 // CALL apoc.trigger.show('neo4j');
 // CALL apoc.trigger.drop('neo4j', 'triggerName');
 
-:use neo4j;
+//:use neo4j;
 // TO remove all HAVE_ACCOUNT edges
 // MATCH p=()-[r:HAVE_ACCOUNT]->() DETACH DELETE r;
