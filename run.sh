@@ -32,6 +32,7 @@ export AGE_GAP=19
 export VARIATION=2.5
 export VARIATION_PERC=12                                    # 12 = .12 = 12%
 
+# IF You want to use datastores other that Kafka at this stage then you will need to use the alternate docker-compose.yml and Makefile located in the `alternate` directory
 export TARGETS=4,4,4
 #export TARGETS=2,2,4                                        # Enable/Create Sessions onto DB stores, this MUST match the *_TARGETS below!!!!!
                                                             # order is adults, children and families
