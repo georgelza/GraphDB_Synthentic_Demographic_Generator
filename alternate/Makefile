@@ -73,7 +73,8 @@ run-full: build-images-full
 cypher:
 	docker compose exec --interactive --tty neo4j cypher-shell -u ${NEO4J_USERNAME} -p ${NEO4J_PASSWORD}
 
-constraints:
+
+scripts:
 	docker compose exec --interactive --tty neo4j cypher-shell -u ${NEO4J_USERNAME} -p ${NEO4J_PASSWORD} -f /cypher/scripts.cypher
 
 

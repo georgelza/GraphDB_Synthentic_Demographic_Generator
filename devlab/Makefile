@@ -7,11 +7,9 @@ define HELP
 Available commands:
 
 - build-images: Build required Docker images (Kafka Connect)
-- run: Build images and start core services (Kafka, Neo4j, MongoDB, PostgreSQL, Redis)
-- run-full: Build images and start all services (includes Flink, Minio)
-- createtopics: Create Kafka topics
+- run: Build images and start core services (Kafka, Neo4j)
 - cypher: Access Neo4j Cypher shell
-- constraints: Apply Neo4j constraints
+- scripts: Apply Neo4j Cypher scripts
 
 - stop: Stop the project
 - start: Start a stopped project
@@ -54,17 +52,21 @@ cypher:
 	docker compose exec --interactive --tty neo4j cypher-shell -u ${NEO4J_USERNAME} -p ${NEO4J_PASSWORD}
 
 
+# Create our various Kafka topic -> Neo4J sink jobs.
 creNodes:
 	cd creConnect; ./deploy.sh
 
+
+# Create our various Edges linking the various nodes, using basic MERGE statements and triggers.
 creEdges:
 	docker compose exec --interactive --tty neo4j cypher-shell -u ${NEO4J_USERNAME} -p ${NEO4J_PASSWORD} -f /cypher/create_LivesAt_edge_trigger.cypher
 #	docker compose exec --interactive --tty neo4j cypher-shell -u ${NEO4J_USERNAME} -p ${NEO4J_PASSWORD} -f /cypher/create_HaveAccount_edge.cypher
 #	docker compose exec --interactive --tty neo4j cypher-shell -u ${NEO4J_USERNAME} -p ${NEO4J_PASSWORD} -f /cypher/create_Card_edge.cypher
 
 
-constraints:
-	docker compose exec --interactive --tty neo4j cypher-shell -u ${NEO4J_USERNAME} -p ${NEO4J_PASSWORD} -f /cypher/constraints.cypher
+scripts:
+	docker compose exec --interactive --tty neo4j cypher-shell -u ${NEO4J_USERNAME} -p ${NEO4J_PASSWORD} -f /cypher/scripts.cypher
+
 
 stop:
 	docker compose stop
