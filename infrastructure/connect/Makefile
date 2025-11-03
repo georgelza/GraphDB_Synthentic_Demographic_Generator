@@ -3,7 +3,7 @@ include ../.env
 
 IMAGE_NAME=kafka-connect-custom
 VERSION=2.2
-BASE_CONNECT_IMAGE=confluentinc/cp-kafka-connect:7.9.1
+BASE_CONNECT_IMAGE=confluentinc/cp-kafka-connect-base:7.9.1
 
 
 define HELP
