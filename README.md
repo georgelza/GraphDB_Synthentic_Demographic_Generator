@@ -17,9 +17,14 @@ In this blog we will take those concepts one step further, we will now make this
 
 I intend to show a couple of things learned, different ways to accomplish what we want, and as always a little off the beaten track of same 101 level examples.
 
-We will be publishing messages containing complex **JSON** onto **Kafka** topics, the `Families` (which we currently do nothing with), `Children` and `Adults` containing a `Address` tag, this we need to be extracted, we then have the `Adults` topic containing a field called `Cccounts` which is an array or records, something I found very few examples out on the internet actually demostrate.
+We will be publishing messages containing complex **JSON** onto **Kafka** topics, the `Families` (which we currently do nothing with), `Children` and `Adults` containing a `Address` tag, this we need to be extracted, we then have the `Adults` topic containing a field called `Accounts` which is an array or records, something I found very few examples out on the internet actually demostrate.
 
 See `<project root>/examples` for examples of these payloads.
+
+    - adults.json
+    - children.json
+    - families.json
+
 
 We will be creating various Kafka Connect sink jobs creating our nodes on the inbound data from these topic.
 For this we will consume our topics: `Adults` and `Children` into multiple nodes.
@@ -50,7 +55,7 @@ This is a capability of our Python Application, now able to post onto **Kafka**,
 I've also aligned/extended the cypher commands from ./nodes/* to align with the data created by our python data generator. The app will now create a nice "Synthetic Demographic dataset" representing Ireland, 4 provinces, multiple counties containing towns which have neighbourhoods. Similar we will create some of the most popular Irish banks and branches for them.
 
 
-To make sure I don't trip over anyone locally looking, having problems with things like PPI/GDPR/PII. I modelled the data as per Ireland, hey, I'm part Irish so allowed to ;). 
+To make sure I don't trip over anyone locally looking, having problems with things like PPI/GDPR/POPI. I modelled the data as per Ireland, hey, I have Irish ancestry so why not ;). 
 
 But if you look at the data folder, containing `ie_banks.json` and `ireland.json` you will realise it wont take much to model to your own locale.
 
