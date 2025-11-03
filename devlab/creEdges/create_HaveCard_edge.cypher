@@ -30,6 +30,7 @@ CALL apoc.trigger.install(
 
 // notice the ON CREATE SET
 :use neo4j;
+
 MATCH (adlt:Adults)
 MATCH (cc:Card)
 WHERE cc.cardNumber IS NOT NULL and adlt.nationalId = cc.nationalId

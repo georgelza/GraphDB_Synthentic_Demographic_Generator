@@ -58,6 +58,9 @@ creNodes:
 
 
 # Create our various Edges linking the various nodes, using basic MERGE statements and triggers.
+constraints:
+	docker compose exec --interactive --tty neo4j cypher-shell -u ${NEO4J_USERNAME} -p ${NEO4J_PASSWORD} -f /constraints/general.cypher
+
 creLivesAt:
 	docker compose exec --interactive --tty neo4j cypher-shell -u ${NEO4J_USERNAME} -p ${NEO4J_PASSWORD} -f /cypher/create_LivesAt_edge_trigger.cypher
 
@@ -66,11 +69,6 @@ creAccount:
 
 creCCard:
 	docker compose exec --interactive --tty neo4j cypher-shell -u ${NEO4J_USERNAME} -p ${NEO4J_PASSWORD} -f /cypher/create_HaveCard_edge.cypher
-
-
-scripts:
-	docker compose exec --interactive --tty neo4j cypher-shell -u ${NEO4J_USERNAME} -p ${NEO4J_PASSWORD} -f /cypher/scripts.cypher
-
 
 stop:
 	docker compose stop

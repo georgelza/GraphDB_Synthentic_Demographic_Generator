@@ -29,6 +29,7 @@ ON CREATE SET n = {
 }
 ```
 
+
 ### Example of Index Creates for Nodes
 
 Unique Constraint on Bank.fspiId nodes.
@@ -43,9 +44,17 @@ Standard Index for Bank.swiftCode
 
 ```cypher
 CREATE INDEX bank_node_swiftCode_idx IF NOT EXISTS
-FOR (b:Bank) ON b.swiftCode;
+FOR (b:Bank) 
+ON b.swiftCode;
 ```
 
+Only in commercial edition, forces uniquecness and ensures value is specified, acts as a not null on the property.
+
+```cypher
+CREATE CONSTRAINT Address_node_parcel_uidx IF NOT EXISTS
+FOR (a:Address) 
+REQUIRE (a.parcel_id) IS NODE KEY;
+```
 
 ### Example of Index Creates for Edges
 

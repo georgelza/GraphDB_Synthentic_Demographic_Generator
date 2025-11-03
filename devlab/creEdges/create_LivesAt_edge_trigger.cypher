@@ -4,6 +4,7 @@
 // Children
 // One way of setting property on relationship is using triggers
 :use system;
+
 CALL apoc.trigger.install(
   'neo4j',
   'createChildrenLivesAtAddress_chldside',
@@ -62,7 +63,6 @@ WHERE chld.parcel_id = addr.parcel_id
 MERGE (chld)-[:LIVES_AT {parcel_id: addr.parcel_id}]->(addr);
 
 // Adults
-// notice the ON CREATE SET
 MATCH (adlt:Adults)
 MATCH (addr:Address)
 WHERE adlt.parcel_id = addr.parcel_id

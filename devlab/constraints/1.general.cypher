@@ -1,9 +1,21 @@
-// Unique constraints on nodes, used for MERGE update statements as the datastore grow.
-CREATE CONSTRAINT bank_node_fspiId_uidx IF NOT EXISTS
-FOR (a:Bank) 
-REQUIRE a.fspiId IS UNIQUE;
 
-// Similar to MobilePhone Numbers and Landline Numbers, Addresses can be associated with multiple people or corporates.
-CREATE INDEX Address_node_parcel_uidx IF NOT EXISTS
+// Unique constraints on nodes to ensure validity of data.
+CREATE CONSTRAINT Address_node_uidx IF NOT EXISTS
 FOR (a:Address) 
-ON a.parcel_id;
+REQUIRE a.parcel_id IS UNIQUE;
+
+CREATE CONSTRAINT Account_node_uidx IF NOT EXISTS
+FOR (a:Account) 
+REQUIRE (a.accountId, a.fspiId) IS UNIQUE;
+
+CREATE CONSTRAINT Adults_node_uidx IF NOT EXISTS
+FOR (a:Adults) 
+REQUIRE (a.nationalId) IS UNIQUE;
+
+CREATE CONSTRAINT Children_node_uidx IF NOT EXISTS
+FOR (a:Children) 
+REQUIRE (a.nationalId) IS UNIQUE;
+
+CREATE CONSTRAINT Card_node_uidx IF NOT EXISTS
+FOR (a:Card) 
+REQUIRE (a.cardNumber) IS UNIQUE;
