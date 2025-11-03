@@ -78,7 +78,7 @@ services:
 
 
   connect:
-    image: ${REPO_NAME}/kafka-connect-custom:2.1
+    image: ${REPO_NAME}/kafka-connect-custom:2.2
     container_name: connect
     hostname: connect
     depends_on:
@@ -113,6 +113,7 @@ services:
     container_name: neo4j
     hostname: neo4j
     image: neo4j:latest
+#    image: neo4j:5.26.15-community
     ports:
       - 7474:7474       # Console/Web Interface
       - 7687:7687
@@ -125,6 +126,9 @@ services:
       - NEO4J_PLUGINS=["apoc", "graph-data-science"]
     volumes:
       - ./creEdges:/cypher
+      - ./nodes:/nodes
+      - ./edges:/edges
+      - ./constraints:/constraints
       - ./data/neo4j_db/data:/data
       - ./data/neo4j_db/logs:/logs
       - ./data/neo4j_db/plugins:/plugins
