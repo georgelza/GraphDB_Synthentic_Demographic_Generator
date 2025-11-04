@@ -139,6 +139,63 @@ services:
       timeout: 5s
       retries: 5
 
+  minio:
+    image: minio/minio:latest
+    container_name: minio
+    hostname: minio
+    ports:
+      - 9001:9001  # Web UI console
+      - 9000:9000  # api address   
+    environment:  
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}          # access.key: mnadmin
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}  # secret.key: mnpassword
+      - AWS_REGION=${AWS_REGION}
+      - AWS_DEFAULT_REGION=${AWS_DEFAULT_REGION}
+
+      - MINIO_ROOT_USER=${MINIO_ROOT_USER}
+      - MINIO_ROOT_PASSWORD=${MINIO_ROOT_PASSWORD}
+      - MINIO_DOMAIN=${MINIO_ALIAS}
+      - MINIO_ENDPOINT=${MINIO_ENDPOINT}
+      - MINIO_BUCKET=${MINIO_BUCKET}
+    volumes:
+      - ./data/minio:/data    
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 30s
+      timeout: 20s
+      retries: 3
+      start_period: 5s
+    command: ["server", "/data", "--console-address", ":9001"]
+
+
+  minio-client:
+    image: minio/mc:latest
+    container_name: mc
+    hostname: mc
+    depends_on:
+      minio:
+        condition: 
+          service_healthy    
+    environment:
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_REGION=${AWS_REGION}
+      - AWS_DEFAULT_REGION=${AWS_DEFAULT_REGION}
+
+      - MINIO_ROOT_USER=${MINIO_ROOT_USER}
+      - MINIO_ROOT_PASSWORD=${MINIO_ROOT_PASSWORD}
+      - MINIO_DOMAIN=${MINIO_ALIAS}
+      - MINIO_ENDPOINT=${MINIO_ENDPOINT}
+      - MINIO_BUCKET=${MINIO_BUCKET}
+    entrypoint: >
+      /bin/sh -c "
+      until (mc alias set ${MINIO_ALIAS} ${MINIO_ENDPOINT} ${MINIO_ROOT_USER} ${MINIO_ROOT_PASSWORD}) do echo '...waiting...' && sleep 1; done;
+      mc rm -r --force ${MINIO_ALIAS}/${MINIO_BUCKET};
+      mc mb ${MINIO_ALIAS}/${MINIO_BUCKET};
+      mc anonymous set public ${MINIO_ALIAS}/${MINIO_BUCKET};
+      tail -f /dev/null
+      "
+
 
 # Without a network explicitly defined, you hit this Hive/Thrift error
 # java.net.URISyntaxException Illegal character in hostname

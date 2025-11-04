@@ -42,7 +42,7 @@ run: build-images
 	@echo "🚀 Starting core services (Kafka, Neo4j )..."
 	docker compose -f docker-compose.yml -p graph up -d \
 		broker schema-registry control-center connect \
-		neo4j  \
+		neo4j \
 		--remove-orphans
 
 # https://neo4j.com/docs/operations-manual/current/docker/operations/#docker-neo4j-plugins

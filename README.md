@@ -1,75 +1,147 @@
 ## Synthetic Demographic Data Generator.
 
-Graph based visualising of Synthentic_Demographic_Generator generated data together with Fake Adults, Children, Addresses and Accounts.
 
+This is still called Fraud Analytics as thats the larger use case I'm exploring, but what we are demonstrating is generic use. This blog is not going to be showing you Funky Graph images, or example after example. It's here to be a building blog, of capability, of options, of tools available to the user.
 
-So ye, this did not start with this, it was more a lets create a couple of people for the local Locale thats more like real people, families (well it was idea out of my **Neo4J** / **GraphDB** blog).
+Overview
 
-Ok, In **part 1** we created our basic GraphDB model with synthentic data of banks, accounts, corporates, people and their associated information like addresses, mobile devices, land line numbers etc.
+So ye, this did not start with this, it was more a lets create a couple of people for the local Locale thats more like real people, families (well it was idea out of my [Neo4J](https://neo4j.com/) / **GraphDB** blog).
 
-In **part 2** we added temporal (aka being able to se how a node changed over time, storing versions, referencing the previous version).
+This is part 3 of a series… not yet sure how many parts there will be.
 
-This is **part 3**. So what are we doing here. Well, I'm not sure, a couple of things, it changed a couple of times along the way... ;) 
+- In [part 1](https://medium.com/@georgelza/fraud-analytics-using-a-different-approach-graphdb-data-platform-part-1-807c68d03bff) we explored how to push data into a GraphDB platform (build using Neo4J) as a graph based data model using the cypher language.
 
-In our previusly blog we manually created the nodes using cypher `MERGE` statements followed by using `MERGE` statements again to create our edges/links. This was to show the power of **Neo4J** as a **GraphDB** and what we have available to work with, the power.
+- In [part 2](https://medium.com/@georgelza/fraud-analytics-using-a-different-approach-graphdb-data-platform-part-2-b7f69d872192) we took the transaction data and added a lineage component to it, also called temporarily, all just fancy words for we link the previous transaction to the next to show the transactions for an account.
 
-In this blog we will take those concepts one step further, we will now make this dynamic, using inbound data as a stream via Kafka topics, together with automated creation of our edges/links using triggers.
+This is [part 3](https://medium.com/@georgelza/fraud-analytics-using-a-different-approach-graphdb-data-platform-part-3-b24a833d22be). So what are we doing here. Well, I'm not sure, a couple of things, it changed a couple of times along the way... ;) 
 
-I intend to show a couple of things learned, different ways to accomplish what we want, and as always a little off the beaten track of same 101 level examples.
+After part 1 and 2, I created a "little" Python application to create synthetic demographic data for us, at volume, all driven by a couple if JSON configuration/seed files.
 
-We will be publishing messages containing complex **JSON** onto **Kafka** topics, the `Families` (which we currently do nothing with), `Children` and `Adults` containing a `Address` tag, this we need to be extracted, we then have the `Adults` topic containing a field called `Accounts` which is an array or records, something I found very few examples out on the internet actually demostrate.
+See: [Synthetic Demographic Data Generator](https://github.com/georgelza/Synthentic_Demographic_Generator).
+
+Let's face it, we're not going to load our data/create nodes by hand using the Cypher language and we're not going to create the edges/links by hand.
+
+We also don't want to dump our real world data to flat files and then load them manually, so what are we to do.
+
+Well, we're in the world of real time streaming data now, and anything batch based is old school, to old, out of date to be effective to prevent i.e.: fraud, or to prevent a machine from failing due to some upstream problems.
+
+So how do we take our stream of data and get it into our GraphDB (based on [Neo4J](https://neo4j.com/)) in real time… and create the edges/links… as data arrives.
+
+Well this is what we will explore here.
+
+In this blog we will take our basic Graph concepts & capabilities as discussed in the previous blogs, and bring them closer to the real world. We will now make this slightly dynamic, consuming our inbound data from our Kafka topics using the Kafka Connect Framework, then sinking the data into our Neo4J data store, thus creating nodes as data arrive, all while creating our edges/links in real time using trigger events.
+
+Our Data flowThe GIT Repo: [GraphDB Synthetic Demographic Generator](https://github.com/georgelza/GraphDB_Synthentic_Demographic_Generator.git) contains the project code.
+
+I intend to show a couple of things learned, along the way, different ways to accomplish what we want, and as always a little off the beaten track, from 101 common level examples out on the internet.
+
+As per the previously blog, we created an Python application that creates a synthetic demographic dataset (see Blog). The application itself is capable of storing the generated data in:
+
+- Kafka,
+- PostgreSQL
+- Redis
+- MongoDB
+
+The app creates a nice "Synthetic Demographic dataset" representing Ireland, based on our 4 provinces, multiple counties containing towns which have neighbourhoods. Similar we will create some of the most popular Irish banks and branches for them.
+
+To make sure I don't trip over anyone locally looking, having problems with things like PPI/GDPR/POPI. I modelled the data as per Ireland, hey, I have Irish ancestry so why not ;).
+
+But if you look at the data folder, containing `ie_banks.json` and `ireland.json` you will realise it won't take much to model to your own locale.
+
+I've aligned the application generated records to match the records from our previous blog where we manually created nodes using our raw cypher commands, these can be found in `devlab/nodes/*` and `devlab/edges/*`.
+
+Basically, we're using the same Banks, provinces, counties & towns (and their associated codes) etc.
+
+As mentioned previously this version can post data directly into either a **MongoDB**, **PostgreSQL**, **Redis** or **Kafka**. This is intentional, based on personal requirements, or make that to attract the attention of a friend (PS, PostgreSQL here also means **Cockroach DB** as its fully **PostgreSQL** line compatible). It can of course easily be extended to cover other databases.
+
+For this blog we will however only publish messages/payloads onto Kafka topics.
+
+**NOTE**: those that followed my blogs, I've discovered a bug in my previous Python logger function which has been fixed here, the file_level and console_levels has also been aligned with public standards.
+
+**WHY** all of this, you ask, well, the world is not always wrapped in a nice ribbon, with all our data coming via a single source. We need to be able to consume our data products where ever they are.
+
+This is where products like [Apache Flink](https://flink.apache.org/) with its native  [CDC](https://nightlies.apache.org/flink/flink-cdc-docs-stable/)(Change data capture) capability helps us, allowing us to source data where it is stored, i.e.: our PostgreSQL, allowing us to injest the data, ensuring we can QA the  source data first, then enrich it, followed publishing to Apache Kafka topics, for consumption by others.
+
+Next we utilise a technology like the [Kafka Connect Framework](https://www.confluent.io/lp/confluent-connectors/) to sink those records onto **Neo4J**, creating our nodes as the output of an automated stream.
+
+Now we have many more ways to source our data, we can also push/store it directly into Neo4J using the various API's available using languages like i.e. Python. But in the end, we want to make data available as fast as possible, available as widely as possible.
+
+Data follows a simple rule, the more people that use data products created the more valuable that data becomes to business.
+For this Blog, we will be publishing payloads comprised out of complex JSON onto 3 Kafka topics:
+
+- Families (which we currently do nothing with),
+- Children
+- Adults
 
 See `<project root>/examples` for examples of these payloads.
 
-    - adults.json
-    - children.json
-    - families.json
+- adults.json
+- children.json
+- families.json
 
 
-We will be creating various Kafka Connect sink jobs creating our nodes on the inbound data from these topic.
-For this we will consume our topics: `Adults` and `Children` into multiple nodes.
+The `Children` and `Adults` payloads both contain an `Address` record, this we will extract, creating `Address` nodes.
+Next the `Adults` topics payload include a tag called `Account` which is an array or records, interestingly a structure I found very few example of online, that actually demonstrate how to work with.
 
-- First we will extract the `Address` from the `Children` topic into `Address` nodes, using a merge, that will either create the node if not exist or update if already exist.
+We will be creating 6 Kafka Connect sink jobs, to create our nodes based on the inbound payloads from these topic.
+For this we will consume our topics: `Adults` and `Children` into multiple nodes types.
 
-- Second we will create the `Children` nodes.
+First we will create the `Children` nodes, to ensure we don't create duplicate records we've defined a unique constraint on the nationalId property using a constraint created. See: `devlab/constraints/general.cypher`.
 
-- Next we will consume the `Adults` topic into nodes, first, again creating similar `Adderess` nodes, again using a merge, that will either create the node if not exist or update if already exist.
-  
-- Next we will unwind the `Account` tag, which is an array of records. Creating bank `Accounts` nodes, if the bank `accountId` is provided, otherwise we will create `Card` nodes, if the `cardnumber` is provided.
+Next we will extract the `Address` from the `Children` payload into `Address` nodes, using a merge statement. This will either create the `Address` node if it does not exist or update if already existing. We also ensure that each `Address` is only created once using a unique index. This unique index create is again shown in the above general.cypher script.
 
-- At this point we will define triggers to create edges/links on the above inbound topics as data is consumed after which we will manually create/add edges/links on already present data.
+Next we will consume the `Adults` topic. We will first create the `Address` nodes from the `address` tag, again using merge syntax, again, this will either create the node if not existing or update if already present. We're also again ensuring we're not creating duplicate `address` nodes by having our previously created unique constraint on the addr`ess node.
 
-To accommodate data arriving last on the `Address` node or last on the `Children` node we will use two triggers, one on the `Children` node and one on the `Address` node, similar pattern will be followed for the `Adults` and `Address`, `Adults` and `Accounts` and `Adults` and `Card` nodes. Thus ensuring irrespective of which Kafka topic payload created a node first or last, we will always get a edge/link added.
+Next (and this is where things got interesting) we will unwind the `account` tag present in the `Adults` payload, which is an array of records. We'll create either a bank `Accounts` node, for each record in the array, if the bank `accountId` is provided, otherwise we will create `Card` node, if the `cardnumber` is provided. The account tag contains an array of records, each record containing either the detail of a bank `account` or credit `card`.
 
-I also show in the `<project root>/devlab/creConnect` the working version of shell and cypher scripts and then in the `v1` directory, a set of scripts that by all rights should have worked, but did not... simply showing how a small change resulted in a big difference. This was resolved with the help of MichaelD from Neo4J fame.
+At this point we will define triggers to create edges/links on the above created nodes created from data received from our inbound topics.
 
-- To execute all the shell scripts to create our nodes see the `devlab/creConnect/deploy.sh`.
+Ok, so here I discovered something, as we're creating the edge/links between an `Adults` node and an `Address` node, we might have the situation that we create the `Adults` node, but the `Address` node where the adult lives does not exist yet, this means we now need to create the link only once the `Address` node is created.
 
-- To create the Edges see devlab/creEdges. These cypher scripts can also be executed indivdually using a `Makefile` command, see `devlab/Makefile`, the constraints option or by using the `cypher-shell` cli and the `:source` pattern. See `devlab/creEdges/README.md`
+This require us to have a trigger on the latter. But now the curve ball, this all can happen in reverse.
+We could end in the scenario where the `address` node was created first, the trigger fired, but the `adult` node did not exist yet… So for this example we now need the trigger on the `adult` node, to create the edge/link when the `adult` node is created. This all resulted in 2 triggers being required.
 
+A similar pattern was created for `Children` and `Address` nodes, and `Adults` and `Accounts` and `Adults` and `Cards`.
+Thus ensuring irrespective of which Kafka topic payload created a node first or last, we will always get an edge/link added.
 
-In a previously blog we created anapplication that creates a synthetic demographic dataset (see Blog []). For that blog posted all data into a single target data store. I've modified this version so that each of our data products can go into it's own data store (As per a earlier blog in my serious, not all data comes nicely package all via your one magical source). 
+Below I show one of the Kafka Sink jobs and the associated Cypher to execute the above.
 
-This is a capability of our Python Application, now able to post onto **Kafka**, **PostgreSQL**, **Redis** or **MongoDB**.
+We create the Kafka Sink jobs using 2 files, first is a shell/script file and the second is our Cypher syntax that is executed when new data arrives on the configured topic.
 
-I've also aligned/extended the cypher commands from ./nodes/* to align with the data created by our python data generator. The app will now create a nice "Synthetic Demographic dataset" representing Ireland, 4 provinces, multiple counties containing towns which have neighbourhoods. Similar we will create some of the most popular Irish banks and branches for them.
+All these can be found in `<project root>/devlab/creConnect` directory.
 
+Also shared, in the `devlab/creConnect/v1` sub-directory, is a set of scripts that by all rights should have worked, but did not… I'm simply sharing these to demonstrate how a very small change made resulted in a big difference. Well, it made it work, repeatedly.
 
-To make sure I don't trip over anyone locally looking, having problems with things like PPI/GDPR/POPI. I modelled the data as per Ireland, hey, I have Irish ancestry so why not ;). 
+The stranger fact here, using the v1 pattern I had some sinks jobs consuming messages from our Kafka topics that operated successfully, but then others that did not, which means it's not a production dependable solution.
 
-But if you look at the data folder, containing `ie_banks.json` and `ireland.json` you will realise it wont take much to model to your own locale.
+This was eventually resolved with the help of MichaelD from Neo4J fame, well, in truth, he provided the entire solution… and I beggingly asked, pleeeasseee help, I'm going mad here …. ;)
 
-At the moment this version can post data directly into either a **MongoDB**, **PostgreSQL**, **Redis** or **Kafka**. That is intentional, based on personal requirements, or make that to attract the attention of a friend (PS, **PostgreSQL** here also means **CockroachDB** as it's fully **PostgreSQL** line compatible). It can of course easily be extended to cover other db's. For this blog it will all go onto **Kafka** topics however.
+To execute all the shell scripts to deploy sink jobs that will create our Neo4J nodes see the `devlab/creConnect/deploy.sh`.
 
-**WHY**: well it allows us to say push the `children` to a **Redis** store, the `adults` to **PostgreSql** and `families` to **Kafka**. With this we can then use a streaming/batch engine like **Apache Flink CDC** to source the adults from the **PostgreSql** store and suck it via **Apache Flink**, push it up to **Apache Kafka** after some data manipulation, and sink it onto **Neo4J** as per this blog. 
+To create the triggers that will create our edge/links see: `devlab/creEdges/README.md`.
 
+We'll be using the cypher-shell cli and the `:source` pattern/command.
+See: `devlab/creEdges/README.md`
 
-NOTE: those that follow my blogs, I've discovered a bug in my previous logger function which has been fixed here, the file_level and console_levels has also been aligned with public standards.
+While in our `<project root>/devlab`, execute:
+`make cypher`
 
+This will open a cypher-shell terminal in our Neo4J container, after which we can copy/pasting the name of the 3 files located in devlab/creEdges into the terminal.
 
-This BLOG: []()
+`:source /cypher/create_LivesAt_edge_trigger.cypher`
 
-GIT REPO: [GraphDB_Synthentic_Demographic_Generator](https://github.com/georgelza/GraphDB_Synthentic_Demographic_Generator.git)
+The above script, as an example will first create a trigger for us, instructing the system to create an edge/link when a new node is created.
+
+After we've build/instantiated this trigger, we want to create edges/links for all nodes that are already pre-existing.
+
+Now, what's still coming. Well, nothing is complete today if we're not using AI and AI is built on first embedding your data (calculating a vector representation of it using a AI model), and then storing those embeddings as vectors in a vector capable database, which Neo4J just so happen to be able to do.
+
+The series is not complete. You will notice in the `README.md` I have some more rabbit hole to explore.
+
+Thanks for following. Till next time.
+
+This BLOG: [](https://medium.com/@georgelza/fraud-analytics-using-a-different-approach-graphdb-data-platform-part-3-b24a833d22be)
+
 
 
 ### Standing Up the environment
